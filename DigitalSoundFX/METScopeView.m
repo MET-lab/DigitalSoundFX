@@ -123,17 +123,17 @@
     trackingLevel = 0.5;
     trackingBufferLength = 32;
     trackingBuffer = (int *)calloc(trackingBufferLength, sizeof(int));
-    for (int i = 0; i < trackingBufferLength; i++)
-        trackingBuffer[i] = 0;
     
     trackingErrorLength = 2;
     trackingErrorIdx = 0;
-    trackingError = (float *)calloc(trackingErrorLength, sizeof(int));
+    trackingError = (float *)malloc(trackingErrorLength * sizeof(int));
     for (int i = 0; i < trackingErrorLength; i++)
         trackingError[i] = INFINITY;
     
     doUpdate = true;        // Schedule initial update
     maxRefreshRate = METScopeview_Default_MaxRefreshRate;  // Update interval
+    
+    pthread_mutex_init(&dataMutex, NULL);
     
     updateClock = [[NSTimer alloc] init];
     [self setMaxRefreshRate:maxRefreshRate];
@@ -478,120 +478,125 @@
     float *xBuffer = (float *)calloc(length, sizeof(float));
     float *yBuffer = (float *)calloc(length, sizeof(float));
 
-    /* Data needs to be updated synchronously in the main thread  */
-    dispatch_sync(dispatch_get_main_queue(), ^{
+    /* Perform an FFT if we're in frequency domain mode */
+    if (displayMode == kMETScopeViewFrequencyDomainMode) {
         
-        /* Perform an FFT if we're in frequency domain mode */
-        if (displayMode == kMETScopeViewFrequencyDomainMode) {
+        [self computeMagnitudeFFT:yy outMagnitude:yBuffer seWindow:false];
+        [self linspace:0.0 max:samplingRate/2 numElements:fftSize/2 array:xBuffer];
+    }
+    /* Otherwise, just copy into the input plot data buffers */
+    else {
+        memcpy(xBuffer, xx, length*sizeof(float));
+        memcpy(yBuffer, yy, length*sizeof(float));
+    }
+    
+    int startingIdx = 0;
+    
+    if (trackingOn)
+        startingIdx = [self getStableStartingIndex:yBuffer length:length];
+    
+    NSMutableArray *newData = [NSMutableArray arrayWithCapacity:plotResolution];
+    
+    /* If the waveform has more samples than the plot resolution, resample the waveform */
+    if (length - startingIdx > plotResolution) {
+        
+        float *indices = (float *)malloc(plotResolution * sizeof(float));
+        [self linspace:startingIdx max:length numElements:plotResolution array:indices];
+        
+        int idx;
+        for (int i = 0; i < plotResolution; i++) {
             
-            [self computeMagnitudeFFT:yy outMagnitude:yBuffer seWindow:false];
-            [self linspace:0.0 max:samplingRate/2 numElements:fftSize/2 array:xBuffer];
-        }
-        /* Otherwise, just copy into the input plot data buffers */
-        else {
-            memcpy(xBuffer, xx, length*sizeof(float));
-            memcpy(yBuffer, yy, length*sizeof(float));
-        }
-        
-        int startingIdx = 0;
-        
-        if (trackingOn)
-            startingIdx = [self getStableStartingIndex:yBuffer length:length];
-        
-        NSMutableArray *newData = [NSMutableArray arrayWithCapacity:plotResolution];
-        
-        /* If the waveform has more samples than the plot resolution, resample the waveform */
-        if (length - startingIdx > plotResolution) {
-            
-            float *indices = (float *)calloc(plotResolution, sizeof(float));
-            [self linspace:startingIdx max:length numElements:plotResolution array:indices];
-            
-            int idx;
-            for (int i = 0; i < plotResolution; i++) {
-                
-                idx = (int)round(indices[i]);
-                [newData insertObject:[NSValue valueWithCGPoint:
-                                       CGPointMake(xBuffer[idx] - xBuffer[startingIdx], yBuffer[idx])]
-                              atIndex:i];
-            }
-            
-            free(indices);
+            idx = (int)round(indices[i]);
+            [newData insertObject:[NSValue valueWithCGPoint:
+                                   CGPointMake(xBuffer[idx] - xBuffer[startingIdx], yBuffer[idx])]
+                          atIndex:i];
         }
         
-        /* If the waveform has fewer samples than the plot resolution, interpolate the waveform */
-        else if (length < plotResolution) {
+        free(indices);
+    }
+    
+    /* If the waveform has fewer samples than the plot resolution, interpolate the waveform */
+    else if (length < plotResolution) {
+        
+        /* Get $plotResolution$ linearly-spaced x-values */
+        float *targetXVals = (float *)malloc(plotResolution * sizeof(float));
+        [self linspace:xBuffer[0] max:xBuffer[length-1] numElements:plotResolution array:targetXVals];
+        
+        CGPoint current, next, target;
+        float perc;
+        int j = 0;
+        for (int i = 0; i < length-1; i++) {
             
-            /* Get $plotResolution$ linearly-spaced x-values */
-            float *targetXVals = (float *)calloc(plotResolution, sizeof(float));
-            [self linspace:xBuffer[0] max:xBuffer[length-1] numElements:plotResolution array:targetXVals];
-            
-            CGPoint current, next, target;
-            float perc;
-            int j = 0;
-            for (int i = 0; i < length-1; i++) {
-                
-                current.x = xBuffer[i];
-                current.y = yBuffer[i];
-                next.x = xBuffer[i+1];
-                next.y = yBuffer[i+1];
-                target.x = targetXVals[j];
-                
-                while (target.x < next.x) {
-                    perc = (target.x - current.x) / (next.x - current.x);
-                    target.y = current.y * (1-perc) + next.y * perc;
-                    [newData addObject:[NSValue valueWithCGPoint:target]];
-                    j++;
-                    target.x = targetXVals[j];
-                }
-            }
-            
-            current.x = xBuffer[length-2];
-            current.y = yBuffer[length-2];
-            next.x = xBuffer[length-1];
-            next.y = yBuffer[length-1];
+            current.x = xBuffer[i];
+            current.y = yBuffer[i];
+            next.x = xBuffer[i+1];
+            next.y = yBuffer[i+1];
             target.x = targetXVals[j];
             
-            while (j < plotResolution) {
-                j++;
+            while (target.x < next.x) {
                 perc = (target.x - current.x) / (next.x - current.x);
                 target.y = current.y * (1-perc) + next.y * perc;
                 [newData addObject:[NSValue valueWithCGPoint:target]];
-            }
-            
-            free(targetXVals);
-        }
-        
-        /* If waveform has number of samples == plot resolution, just copy */
-        else {
-            for (int i = 0; i < length; i++) {
-                [newData insertObject:[NSValue valueWithCGPoint:
-                                       CGPointMake(xBuffer[i], yBuffer[i])]
-                              atIndex:i];
+                j++;
+                target.x = targetXVals[j];
             }
         }
         
-        /* Append new waveform for index -1 */
-        if (index == -1) {
-            [plotData addObject:newData];
-            [plotColors addObject:color];
-            [lineWidths addObject:[NSNumber numberWithFloat:width]];
+        current.x = xBuffer[length-2];
+        current.y = yBuffer[length-2];
+        next.x = xBuffer[length-1];
+        next.y = yBuffer[length-1];
+        target.x = targetXVals[j];
+        
+        while (j < plotResolution) {
+            j++;
+            perc = (target.x - current.x) / (next.x - current.x);
+            target.y = current.y * (1-perc) + next.y * perc;
+            [newData addObject:[NSValue valueWithCGPoint:target]];
         }
-        /* Append for index i if plot has i-1 waveforms */
-        else if (index == [plotData count]) {
-            [plotData addObject:newData];
-            [plotColors addObject:color];
-            [lineWidths addObject:[NSNumber numberWithFloat:width]];
+        
+        free(targetXVals);
+    }
+    
+    /* If waveform has number of samples == plot resolution, just copy */
+    else {
+        for (int i = 0; i < length; i++) {
+            [newData insertObject:[NSValue valueWithCGPoint:
+                                   CGPointMake(xBuffer[i], yBuffer[i])]
+                          atIndex:i];
         }
-        /* Otherwise, replace plot data at the specified index */
-        else if (index >= 0 && index < [plotData count]) {
+    }
+    
+    pthread_mutex_lock(&dataMutex);
+    
+    /* Append new waveform for index -1 */
+    if (index == -1) {
+        [plotData addObject:newData];
+        [plotColors addObject:color];
+        [lineWidths addObject:[NSNumber numberWithFloat:width]];
+    }
+    /* Append for index i if plot has i-1 waveforms */
+    else if (index == [plotData count]) {
+        [plotData addObject:newData];
+        [plotColors addObject:color];
+        [lineWidths addObject:[NSNumber numberWithFloat:width]];
+    }
+    /* Otherwise, replace plot data at the specified index */
+    else if (index >= 0 && index < [plotData count]) {
+//        @synchronized (plotData[index]) {
             [plotData replaceObjectAtIndex:index withObject:newData];
+//        }
+//        @synchronized (plotColors[index]) {
             [plotColors replaceObjectAtIndex:index withObject:color];
+//        }
+//        @synchronized (lineWidths[index]) {
             [lineWidths addObject:[NSNumber numberWithFloat:width]];
-        }
-        else
-            NSLog(@"Invalid plot data index %d\n[plotData count] = %lu", index, (unsigned long)[plotData count]);
-            
-    });
+//        }
+    }
+    else
+        NSLog(@"Invalid plot data index %d\n[plotData count] = %lu", index, (unsigned long)[plotData count]);
+    
+    pthread_mutex_unlock(&dataMutex);
     
     free(xBuffer);
     free(yBuffer);
@@ -621,15 +626,20 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGPoint current;                // Reusable current point
     
+    pthread_mutex_lock(&dataMutex);
+    
     int nWaveforms = (int)[plotData count];
     
     /* Keep nWaveforms previous points (in plot units) for each waveform */
     NSMutableArray *previous = [[NSMutableArray alloc] initWithCapacity:nWaveforms];
     for(int n = 0; n < nWaveforms; n++) {
         
+//        @synchronized (plotData[n]) {
+        
         /* Get first index from each waveform */
         current = [self plotScaleToPixel:[plotData[n][0] CGPointValue]];
         [previous addObject:[NSValue valueWithCGPoint:current]];
+//        }
     }
     
     /* Draw on the view from left to right, cycling through each waveform in the inner loop. Doesn't work the other way around for some reason */
@@ -637,26 +647,33 @@
         
         for (int n = 0; n < nWaveforms; n++) {
             
-            /* Current point: n^th waveform, i^th sample */
-            current = [self plotScaleToPixel:[plotData[n][i] CGPointValue]];
-            
-            CGContextBeginPath(context);
-            
-            /* Set the color for this waveform */
-            CGContextSetStrokeColorWithColor(context, ((UIColor *)[plotColors objectAtIndex:n]).CGColor);
-            CGContextSetLineWidth(context, [[lineWidths objectAtIndex:n] floatValue]);
-            
-            /* Append line from previous point to current point */
-            CGContextMoveToPoint(context, [previous[n] CGPointValue].x, [previous[n] CGPointValue].y);
-            CGContextAddLineToPoint(context, current.x, current.y);
-            
-            /* Draw */
-            CGContextStrokePath(context);
-            
-            /* Current point becomes the previous point */
-            [previous replaceObjectAtIndex:n withObject:[NSValue valueWithCGPoint:current]];
+//            @synchronized (plotData[n]) {
+                /* Current point: n^th waveform, i^th sample */
+                current = [self plotScaleToPixel:[plotData[n][i] CGPointValue]];
+                
+                CGContextBeginPath(context);
+                
+                /* Set color and line width */
+//                @synchronized (plotColors[n]) {
+                    CGContextSetStrokeColorWithColor(context, ((UIColor *)[plotColors objectAtIndex:n]).CGColor);
+//                }
+//                @synchronized (lineWidths[n]) {
+                    CGContextSetLineWidth(context, [[lineWidths objectAtIndex:n] floatValue]);
+//                }
+                
+                /* Append line from previous point to current point */
+                CGContextMoveToPoint(context, [previous[n] CGPointValue].x, [previous[n] CGPointValue].y);
+                CGContextAddLineToPoint(context, current.x, current.y);
+                
+                /* Draw */
+                CGContextStrokePath(context);
+                
+                /* Current point becomes the previous point */
+                [previous replaceObjectAtIndex:n withObject:[NSValue valueWithCGPoint:current]];
+            }
         }
-    }
+    
+    pthread_mutex_unlock(&dataMutex);
     
     if (axesOn)     [self drawAxes];
     if (xLabelsOn)  [self drawXLabels];

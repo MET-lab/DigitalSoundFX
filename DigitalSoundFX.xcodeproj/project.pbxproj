@@ -21,6 +21,9 @@
 		1FD52A1A1920481B0048AE0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD529FC1920481B0048AE0F /* UIKit.framework */; };
 		1FD52A221920481B0048AE0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FD52A201920481B0048AE0F /* InfoPlist.strings */; };
 		1FD52A241920481B0048AE0F /* DigitalSoundFXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD52A231920481B0048AE0F /* DigitalSoundFXTests.m */; };
+		1FD52A3219204C620048AE0F /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD52A3119204C620048AE0F /* AudioController.m */; };
+		1FD52A34192062D60048AE0F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD52A33192062D60048AE0F /* AudioToolbox.framework */; };
+		1FF2BB12192720680051B49D /* METScopeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF2BB11192720680051B49D /* METScopeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		1FD52A1F1920481B0048AE0F /* DigitalSoundFXTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DigitalSoundFXTests-Info.plist"; sourceTree = "<group>"; };
 		1FD52A211920481B0048AE0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1FD52A231920481B0048AE0F /* DigitalSoundFXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DigitalSoundFXTests.m; sourceTree = "<group>"; };
+		1FD52A3019204C620048AE0F /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioController.h; path = DigitalSoundFX/AudioController.h; sourceTree = "<group>"; };
+		1FD52A3119204C620048AE0F /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioController.m; path = DigitalSoundFX/AudioController.m; sourceTree = "<group>"; };
+		1FD52A33192062D60048AE0F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1FF2BB10192720680051B49D /* METScopeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = METScopeView.h; path = DigitalSoundFX/METScopeView.h; sourceTree = "<group>"; };
+		1FF2BB11192720680051B49D /* METScopeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = METScopeView.m; path = DigitalSoundFX/METScopeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD52A34192062D60048AE0F /* AudioToolbox.framework in Frameworks */,
 				1FD529FB1920481B0048AE0F /* CoreGraphics.framework in Frameworks */,
 				1FD529FD1920481B0048AE0F /* UIKit.framework in Frameworks */,
 				1FD529F91920481B0048AE0F /* Foundation.framework in Frameworks */,
@@ -82,6 +91,8 @@
 		1FD529EC1920481B0048AE0F = {
 			isa = PBXGroup;
 			children = (
+				1FF2BB131927206D0051B49D /* Visual */,
+				1FD52A381923EA2E0048AE0F /* Audio */,
 				1FD529FE1920481B0048AE0F /* DigitalSoundFX */,
 				1FD52A1D1920481B0048AE0F /* DigitalSoundFXTests */,
 				1FD529F71920481B0048AE0F /* Frameworks */,
@@ -101,6 +112,7 @@
 		1FD529F71920481B0048AE0F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1FD52A33192062D60048AE0F /* AudioToolbox.framework */,
 				1FD529F81920481B0048AE0F /* Foundation.framework */,
 				1FD529FA1920481B0048AE0F /* CoreGraphics.framework */,
 				1FD529FC1920481B0048AE0F /* UIKit.framework */,
@@ -150,6 +162,24 @@
 				1FD52A201920481B0048AE0F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FD52A381923EA2E0048AE0F /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				1FD52A3019204C620048AE0F /* AudioController.h */,
+				1FD52A3119204C620048AE0F /* AudioController.m */,
+			);
+			name = Audio;
+			sourceTree = "<group>";
+		};
+		1FF2BB131927206D0051B49D /* Visual */ = {
+			isa = PBXGroup;
+			children = (
+				1FF2BB10192720680051B49D /* METScopeView.h */,
+				1FF2BB11192720680051B49D /* METScopeView.m */,
+			);
+			name = Visual;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FF2BB12192720680051B49D /* METScopeView.m in Sources */,
+				1FD52A3219204C620048AE0F /* AudioController.m in Sources */,
 				1FD52A0F1920481B0048AE0F /* ViewController.m in Sources */,
 				1FD52A091920481B0048AE0F /* AppDelegate.m in Sources */,
 				1FD52A051920481B0048AE0F /* main.m in Sources */,
@@ -458,6 +490,7 @@
 				1FD52A291920481B0048AE0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FD52A2A1920481B0048AE0F /* Build configuration list for PBXNativeTarget "DigitalSoundFXTests" */ = {
 			isa = XCConfigurationList;
@@ -466,6 +499,7 @@
 				1FD52A2C1920481B0048AE0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

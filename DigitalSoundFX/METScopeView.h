@@ -6,8 +6,12 @@
 //  Copyright (c) 2014 Jeff Gregorio. All rights reserved.
 //
 
+/* To Do: store a struct for every plot waveform that holds a standard float array, a plot color, a line width, and a mutex for that waveform (and all its properties) specifically. See if I can store an NSMutableArray of C structs. If not, try typecasting to NSValue, and if that doesn't work, make an Objective C class instead of a C struct. */
+
+
 #import <UIKit/UIKit.h>
 #import <Accelerate/Accelerate.h>
+#import <pthread.h>
 
 #define METScopeView_Default_PlotResolution 512
 #define METScopeview_Default_MaxRefreshRate 0.02
@@ -24,7 +28,7 @@
 #define METScopeView_Default_SamplingRate 44100 // For x-axis scaling
 #define METScopeView_Default_XMin_FD (-20)
 #define METScopeView_Default_XMax_FD 20000.0    // For sampling rate 44.1kHz
-#define METScopeView_Default_YMin_FD (-0.03)
+#define METScopeView_Default_YMin_FD (-0.04)
 #define METScopeView_Default_YMax_FD 1.0
 #define METScopeView_Default_XTick_FD 4000
 #define METScopeView_Default_YTick_FD 0.25
@@ -98,6 +102,7 @@
     FFTSetup fftSetup;          // vDSP FFT struct
     COMPLEX_SPLIT splitBuffer;  // Buffer holding real and complex parts
     
+    pthread_mutex_t dataMutex;
 }
 
 /* Note: setting properties directly doesn't schedule an update. If the view isn't being updated regularly by a callback passing new plot data, then use [METScopeView setNeedsDisplay] or the toggle methods */
@@ -178,5 +183,14 @@
 /* Set/update plot color and line width for a waveform at some index */
 - (void)setPlotColor:(UIColor *)color atIndex:(int)index;
 - (void)setLineWidth:(float)width atIndex:(int)index;
+
+@end
+
+/* Paradigm change: objects that wish to pass data to METScopeView should implement methods to return plot data on request. METScopeView could have a member variable 'dataSource', and drawRect: could call the dataSource's plot data pull method. */
+@protocol METScopeViewDataSource <NSObject>
+
+@required
+- (float *)passXDataToScope;
+- (float *)passYDataToScope;
 
 @end

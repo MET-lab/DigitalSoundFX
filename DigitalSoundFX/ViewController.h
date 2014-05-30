@@ -8,6 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "AudioController.h"
+#import "METScopeView.h"
+
+@interface ViewController : UIViewController <AudioControllerDelegate> {
+    
+    AudioController *audioController;
+    
+    IBOutlet METScopeView *kObjectTDScopeView;
+    IBOutlet METScopeView *kObjectFDScopeView;
+    
+    UIView *distPinchRegionView;
+    UIPinchGestureRecognizer *distCutoffPinchRecognizer;
+    float previousPinchScale;
+    float clippingAmplitude;
+    
+    IBOutlet UISlider *kObjectMasterVolSlider;
+}
+
+
+
+- (IBAction)toggleAudio:(id)sender;
+
 
 @end
+
