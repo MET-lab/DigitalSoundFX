@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F7A32571939482F008B08AA /* NVAllpassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A32441939482F008B08AA /* NVAllpassFilter.m */; };
+		1F7A32581939482F008B08AA /* NVBandpassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A32461939482F008B08AA /* NVBandpassFilter.m */; };
+		1F7A32591939482F008B08AA /* NVBandpassQPeakGainFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A32481939482F008B08AA /* NVBandpassQPeakGainFilter.m */; };
+		1F7A325A1939482F008B08AA /* NVHighpassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A324A1939482F008B08AA /* NVHighpassFilter.m */; };
+		1F7A325B1939482F008B08AA /* NVHighShelvingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A324C1939482F008B08AA /* NVHighShelvingFilter.m */; };
+		1F7A325C1939482F008B08AA /* NVLowpassFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A324E1939482F008B08AA /* NVLowpassFilter.m */; };
+		1F7A325D1939482F008B08AA /* NVLowShelvingFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A32501939482F008B08AA /* NVLowShelvingFilter.m */; };
+		1F7A325E1939482F008B08AA /* NVNotchFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A32521939482F008B08AA /* NVNotchFilter.m */; };
+		1F7A325F1939482F008B08AA /* NVPeakingEQFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A32541939482F008B08AA /* NVPeakingEQFilter.m */; };
+		1F7A32601939482F008B08AA /* NVDSP.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A32561939482F008B08AA /* NVDSP.mm */; };
+		1F7A32631939579B008B08AA /* EnvelopeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A32621939579B008B08AA /* EnvelopeView.m */; };
+		1F7A32AF193D2E84008B08AA /* FunctionDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F7A32AE193D2E84008B08AA /* FunctionDrawView.m */; };
+		1FC51705195A09880025AAA7 /* CircularBuffer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC51704195A09880025AAA7 /* CircularBuffer.m */; };
 		1FD529F91920481B0048AE0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD529F81920481B0048AE0F /* Foundation.framework */; };
 		1FD529FB1920481B0048AE0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD529FA1920481B0048AE0F /* CoreGraphics.framework */; };
 		1FD529FD1920481B0048AE0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD529FC1920481B0048AE0F /* UIKit.framework */; };
@@ -21,7 +34,7 @@
 		1FD52A1A1920481B0048AE0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD529FC1920481B0048AE0F /* UIKit.framework */; };
 		1FD52A221920481B0048AE0F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FD52A201920481B0048AE0F /* InfoPlist.strings */; };
 		1FD52A241920481B0048AE0F /* DigitalSoundFXTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD52A231920481B0048AE0F /* DigitalSoundFXTests.m */; };
-		1FD52A3219204C620048AE0F /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FD52A3119204C620048AE0F /* AudioController.m */; };
+		1FD52A3219204C620048AE0F /* AudioController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1FD52A3119204C620048AE0F /* AudioController.mm */; };
 		1FD52A34192062D60048AE0F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FD52A33192062D60048AE0F /* AudioToolbox.framework */; };
 		1FF2BB12192720680051B49D /* METScopeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FF2BB11192720680051B49D /* METScopeView.m */; };
 /* End PBXBuildFile section */
@@ -37,6 +50,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F7A32431939482F008B08AA /* NVAllpassFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVAllpassFilter.h; sourceTree = "<group>"; };
+		1F7A32441939482F008B08AA /* NVAllpassFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVAllpassFilter.m; sourceTree = "<group>"; };
+		1F7A32451939482F008B08AA /* NVBandpassFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVBandpassFilter.h; sourceTree = "<group>"; };
+		1F7A32461939482F008B08AA /* NVBandpassFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVBandpassFilter.m; sourceTree = "<group>"; };
+		1F7A32471939482F008B08AA /* NVBandpassQPeakGainFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVBandpassQPeakGainFilter.h; sourceTree = "<group>"; };
+		1F7A32481939482F008B08AA /* NVBandpassQPeakGainFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVBandpassQPeakGainFilter.m; sourceTree = "<group>"; };
+		1F7A32491939482F008B08AA /* NVHighpassFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHighpassFilter.h; sourceTree = "<group>"; };
+		1F7A324A1939482F008B08AA /* NVHighpassFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHighpassFilter.m; sourceTree = "<group>"; };
+		1F7A324B1939482F008B08AA /* NVHighShelvingFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVHighShelvingFilter.h; sourceTree = "<group>"; };
+		1F7A324C1939482F008B08AA /* NVHighShelvingFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVHighShelvingFilter.m; sourceTree = "<group>"; };
+		1F7A324D1939482F008B08AA /* NVLowpassFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVLowpassFilter.h; sourceTree = "<group>"; };
+		1F7A324E1939482F008B08AA /* NVLowpassFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVLowpassFilter.m; sourceTree = "<group>"; };
+		1F7A324F1939482F008B08AA /* NVLowShelvingFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVLowShelvingFilter.h; sourceTree = "<group>"; };
+		1F7A32501939482F008B08AA /* NVLowShelvingFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVLowShelvingFilter.m; sourceTree = "<group>"; };
+		1F7A32511939482F008B08AA /* NVNotchFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVNotchFilter.h; sourceTree = "<group>"; };
+		1F7A32521939482F008B08AA /* NVNotchFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVNotchFilter.m; sourceTree = "<group>"; };
+		1F7A32531939482F008B08AA /* NVPeakingEQFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVPeakingEQFilter.h; sourceTree = "<group>"; };
+		1F7A32541939482F008B08AA /* NVPeakingEQFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVPeakingEQFilter.m; sourceTree = "<group>"; };
+		1F7A32551939482F008B08AA /* NVDSP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVDSP.h; sourceTree = "<group>"; };
+		1F7A32561939482F008B08AA /* NVDSP.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = NVDSP.mm; sourceTree = "<group>"; };
+		1F7A32611939579B008B08AA /* EnvelopeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnvelopeView.h; path = DigitalSoundFX/EnvelopeView.h; sourceTree = "<group>"; };
+		1F7A32621939579B008B08AA /* EnvelopeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EnvelopeView.m; path = DigitalSoundFX/EnvelopeView.m; sourceTree = "<group>"; };
+		1F7A32AD193D2E84008B08AA /* FunctionDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FunctionDrawView.h; path = DigitalSoundFX/FunctionDrawView.h; sourceTree = "<group>"; };
+		1F7A32AE193D2E84008B08AA /* FunctionDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FunctionDrawView.m; path = DigitalSoundFX/FunctionDrawView.m; sourceTree = "<group>"; };
+		1FC51703195A09880025AAA7 /* CircularBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircularBuffer.h; sourceTree = "<group>"; };
+		1FC51704195A09880025AAA7 /* CircularBuffer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircularBuffer.m; sourceTree = "<group>"; };
 		1FD529F51920481B0048AE0F /* DigitalSoundFX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalSoundFX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD529F81920481B0048AE0F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1FD529FA1920481B0048AE0F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -57,7 +96,7 @@
 		1FD52A211920481B0048AE0F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1FD52A231920481B0048AE0F /* DigitalSoundFXTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DigitalSoundFXTests.m; sourceTree = "<group>"; };
 		1FD52A3019204C620048AE0F /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioController.h; path = DigitalSoundFX/AudioController.h; sourceTree = "<group>"; };
-		1FD52A3119204C620048AE0F /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AudioController.m; path = DigitalSoundFX/AudioController.m; sourceTree = "<group>"; };
+		1FD52A3119204C620048AE0F /* AudioController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AudioController.mm; path = DigitalSoundFX/AudioController.mm; sourceTree = "<group>"; };
 		1FD52A33192062D60048AE0F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1FF2BB10192720680051B49D /* METScopeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = METScopeView.h; path = DigitalSoundFX/METScopeView.h; sourceTree = "<group>"; };
 		1FF2BB11192720680051B49D /* METScopeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = METScopeView.m; path = DigitalSoundFX/METScopeView.m; sourceTree = "<group>"; };
@@ -88,9 +127,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F7A32411939482F008B08AA /* NVDSP */ = {
+			isa = PBXGroup;
+			children = (
+				1F7A32421939482F008B08AA /* Filters */,
+				1F7A32551939482F008B08AA /* NVDSP.h */,
+				1F7A32561939482F008B08AA /* NVDSP.mm */,
+			);
+			path = NVDSP;
+			sourceTree = "<group>";
+		};
+		1F7A32421939482F008B08AA /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				1F7A32431939482F008B08AA /* NVAllpassFilter.h */,
+				1F7A32441939482F008B08AA /* NVAllpassFilter.m */,
+				1F7A32451939482F008B08AA /* NVBandpassFilter.h */,
+				1F7A32461939482F008B08AA /* NVBandpassFilter.m */,
+				1F7A32471939482F008B08AA /* NVBandpassQPeakGainFilter.h */,
+				1F7A32481939482F008B08AA /* NVBandpassQPeakGainFilter.m */,
+				1F7A32491939482F008B08AA /* NVHighpassFilter.h */,
+				1F7A324A1939482F008B08AA /* NVHighpassFilter.m */,
+				1F7A324B1939482F008B08AA /* NVHighShelvingFilter.h */,
+				1F7A324C1939482F008B08AA /* NVHighShelvingFilter.m */,
+				1F7A324D1939482F008B08AA /* NVLowpassFilter.h */,
+				1F7A324E1939482F008B08AA /* NVLowpassFilter.m */,
+				1F7A324F1939482F008B08AA /* NVLowShelvingFilter.h */,
+				1F7A32501939482F008B08AA /* NVLowShelvingFilter.m */,
+				1F7A32511939482F008B08AA /* NVNotchFilter.h */,
+				1F7A32521939482F008B08AA /* NVNotchFilter.m */,
+				1F7A32531939482F008B08AA /* NVPeakingEQFilter.h */,
+				1F7A32541939482F008B08AA /* NVPeakingEQFilter.m */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		1FC516FC1959EE270025AAA7 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1FC51703195A09880025AAA7 /* CircularBuffer.h */,
+				1FC51704195A09880025AAA7 /* CircularBuffer.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		1FD529EC1920481B0048AE0F = {
 			isa = PBXGroup;
 			children = (
+				1F7A32AD193D2E84008B08AA /* FunctionDrawView.h */,
+				1F7A32AE193D2E84008B08AA /* FunctionDrawView.m */,
+				1F7A32411939482F008B08AA /* NVDSP */,
 				1FF2BB131927206D0051B49D /* Visual */,
 				1FD52A381923EA2E0048AE0F /* Audio */,
 				1FD529FE1920481B0048AE0F /* DigitalSoundFX */,
@@ -167,8 +253,9 @@
 		1FD52A381923EA2E0048AE0F /* Audio */ = {
 			isa = PBXGroup;
 			children = (
+				1FC516FC1959EE270025AAA7 /* Utility */,
 				1FD52A3019204C620048AE0F /* AudioController.h */,
-				1FD52A3119204C620048AE0F /* AudioController.m */,
+				1FD52A3119204C620048AE0F /* AudioController.mm */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -176,6 +263,8 @@
 		1FF2BB131927206D0051B49D /* Visual */ = {
 			isa = PBXGroup;
 			children = (
+				1F7A32611939579B008B08AA /* EnvelopeView.h */,
+				1F7A32621939579B008B08AA /* EnvelopeView.m */,
 				1FF2BB10192720680051B49D /* METScopeView.h */,
 				1FF2BB11192720680051B49D /* METScopeView.m */,
 			);
@@ -279,10 +368,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FC51705195A09880025AAA7 /* CircularBuffer.m in Sources */,
 				1FF2BB12192720680051B49D /* METScopeView.m in Sources */,
-				1FD52A3219204C620048AE0F /* AudioController.m in Sources */,
+				1F7A325B1939482F008B08AA /* NVHighShelvingFilter.m in Sources */,
+				1F7A32631939579B008B08AA /* EnvelopeView.m in Sources */,
+				1F7A32AF193D2E84008B08AA /* FunctionDrawView.m in Sources */,
+				1F7A325A1939482F008B08AA /* NVHighpassFilter.m in Sources */,
+				1F7A325C1939482F008B08AA /* NVLowpassFilter.m in Sources */,
+				1F7A325D1939482F008B08AA /* NVLowShelvingFilter.m in Sources */,
+				1FD52A3219204C620048AE0F /* AudioController.mm in Sources */,
+				1F7A32601939482F008B08AA /* NVDSP.mm in Sources */,
 				1FD52A0F1920481B0048AE0F /* ViewController.m in Sources */,
+				1F7A325E1939482F008B08AA /* NVNotchFilter.m in Sources */,
 				1FD52A091920481B0048AE0F /* AppDelegate.m in Sources */,
+				1F7A32581939482F008B08AA /* NVBandpassFilter.m in Sources */,
+				1F7A32591939482F008B08AA /* NVBandpassQPeakGainFilter.m in Sources */,
+				1F7A325F1939482F008B08AA /* NVPeakingEQFilter.m in Sources */,
+				1F7A32571939482F008B08AA /* NVAllpassFilter.m in Sources */,
 				1FD52A051920481B0048AE0F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

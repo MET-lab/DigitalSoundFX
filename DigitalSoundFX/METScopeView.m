@@ -8,32 +8,580 @@
 
 #import "METScopeView.h"
 
+#pragma mark -
+#pragma mark METScopePlotDataView
+@interface METScopePlotDataView : UIView {
+    CGPoint *plotUnits;     // Plot data in plot units
+    CGPoint *plotPixels;    // Plot data in pixels
+    pthread_mutex_t dataMutex;
+}
+@property (readonly) METScopeView *parent;
+@property (readonly) bool visible;
+@property (readonly) int resolution;
+@property CGFloat lineWidth;
+@property UIColor *lineColor;
+@end
+
+@implementation  METScopePlotDataView
+@synthesize parent;
+@synthesize visible;
+@synthesize resolution;
+@synthesize lineWidth;
+@synthesize lineColor;
+
+/* Create a transparent subview using the parent's frame and specified color and linewidth */
+- (id)initWithParentView:(METScopeView *)pParent resolution:(int)pRes plotColor:(UIColor *)pColor lineWidth:(CGFloat)pWidth {
+    
+    CGRect frame = pParent.frame;
+    frame.origin.x = frame.origin.y = 0;
+    
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        [self setBackgroundColor:[UIColor clearColor]];
+        parent = pParent;
+        lineColor = pColor;
+        lineWidth = pWidth;
+        [self setResolution:pRes];
+        visible = true;
+        pthread_mutex_init(&dataMutex, NULL);
+    }
+    return self;
+}
+
+/* Free any dynamically-allocated memory */
+- (void)dealloc {
+    
+    pthread_mutex_lock(&dataMutex);
+    
+    if (plotUnits)
+        free(plotUnits);
+    
+    if (plotPixels)
+        free(plotPixels);
+    
+    pthread_mutex_unlock(&dataMutex);
+    pthread_mutex_destroy(&dataMutex);
+}
+
+/* Set whether this plot data gets drawn in the parent view */
+- (void)setVisible:(bool)vis {
+    
+    visible = vis;
+    [self setNeedsDisplay];
+}
+
+/* Set the plot resolution and (re-)allocate a plot buffer */
+- (void)setResolution:(int)pRes {
+    
+    resolution = pRes;
+    
+    pthread_mutex_lock(&dataMutex);
+    
+    if (plotUnits)
+        free(plotUnits);
+    
+    if (plotPixels)
+        free(plotPixels);
+    
+    plotUnits  = (CGPoint *)calloc(resolution, sizeof(CGPoint));
+    plotPixels = (CGPoint *)calloc(resolution, sizeof(CGPoint));
+    
+    pthread_mutex_unlock(&dataMutex);
+}
+
+/* Set the plot data in plot units by sampling or interpolating */
+- (void)setDataWithLength:(int)length xData:(float *)xx yData:(float *)yy {
+    
+    /* Allocate buffers and copy the input data so we don't modify the original */
+    float *xBuffer = (float *)calloc(length, sizeof(float));
+    float *yBuffer = (float *)calloc(length, sizeof(float));
+    memcpy(xBuffer, xx, length * sizeof(float));
+    memcpy(yBuffer, yy, length * sizeof(float));
+    
+    /* If the waveform has more samples than the plot resolution, resample the waveform */
+    if (length > resolution) {
+        
+        /* Get linearly-spaced indices to sample the incoming waveform */
+        float *indices = (float *)calloc(resolution, sizeof(float));
+        [self linspace:0 max:length numElements:resolution array:indices];
+        
+        /* Make sure drawRect doesn't access the data while we're updating it */
+        pthread_mutex_lock(&dataMutex);
+        
+        int idx;
+        for (int i = 0; i < resolution; i++) {
+            idx = (int)indices[i];
+            plotUnits[i] = CGPointMake(xBuffer[idx], yBuffer[idx]);
+        }
+        
+        pthread_mutex_unlock(&dataMutex);
+        free(indices);
+    }
+    
+    /* If the waveform has fewer samples than the plot resolution, interpolate the waveform */
+    else if (length < resolution) {
+        
+        /* Get $plotResolution$ linearly-spaced x-values */
+        float *targetXVals = (float *)calloc(resolution, sizeof(float));
+        [self linspace:xBuffer[0] max:xBuffer[length-1] numElements:resolution array:targetXVals];
+        
+        /* Make sure drawRect doesn't access the data while we're updating it */
+        pthread_mutex_lock(&dataMutex);
+        
+        /* Interpolate */
+        CGPoint current, next, target;
+        float perc;
+        int j = 0;
+        for (int i = 0; i < length-1; i++) {
+            
+            current.x = xBuffer[i];
+            current.y = yBuffer[i];
+            next.x = xBuffer[i+1];
+            next.y = yBuffer[i+1];
+            target.x = targetXVals[j];
+            
+            while (target.x < next.x) {
+                perc = (target.x - current.x) / (next.x - current.x);
+                target.y = current.y * (1-perc) + next.y * perc;
+                plotUnits[j] = target;
+                j++;
+                target.x = targetXVals[j];
+            }
+        }
+        
+        current.x = xBuffer[length-2];
+        current.y = yBuffer[length-2];
+        next.x = xBuffer[length-1];
+        next.y = yBuffer[length-1];
+        target.x = targetXVals[j];
+        
+        while (j < resolution-1) {
+            j++;
+            perc = (target.x - current.x) / (next.x - current.x);
+            target.y = current.y * (1-perc) + next.y * perc;
+            plotUnits[j] = target;
+        }
+        
+        pthread_mutex_unlock(&dataMutex);
+        free(targetXVals);
+    }
+    
+    /* If waveform has number of samples == plot resolution, just copy */
+    else {
+        pthread_mutex_lock(&dataMutex);
+        for (int i = 0; i < length; i++)
+            plotUnits[i] = CGPointMake(xBuffer[i], yBuffer[i]);
+        pthread_mutex_unlock(&dataMutex);
+    }
+    
+    free(xBuffer);
+    free(yBuffer);
+    
+    [self rescalePlotData];     // Convert sampled plot units to pixels
+    [self setNeedsDisplay];     // Update
+}
+
+/* Convert plot units to pixels */
+- (void)rescalePlotData {
+    
+    pthread_mutex_lock(&dataMutex);
+    
+    for (int i = 0; i < resolution; i++)
+        plotPixels[i] = [parent plotScaleToPixel:plotUnits[i]];
+    
+    pthread_mutex_unlock(&dataMutex);
+}
+
+/* UIView subclass override. Main drawing method */
+- (void)drawRect:(CGRect)rect {
+    
+    if (!visible)
+        return;
+    
+    pthread_mutex_lock(&dataMutex);
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetLineWidth(context, lineWidth);
+    CGContextSetStrokeColorWithColor(context, lineColor.CGColor);
+    
+    CGPoint previous = plotPixels[0];
+    
+    for (int i = 1; i < resolution-1; i++) {
+        
+        if (isnan((float)plotPixels[i].x) || isnan((float)plotPixels[i].y))
+            continue;
+    
+        CGContextBeginPath(context);
+        CGContextMoveToPoint(context, previous.x, previous.y);
+        CGContextAddLineToPoint(context, plotPixels[i].x, plotPixels[i].y);
+        CGContextStrokePath(context);
+        
+        previous = plotPixels[i];
+    }
+    
+    pthread_mutex_unlock(&dataMutex);
+}
+
+/* Generate a linearly-spaced set of indices for sampling an incoming waveform */
+- (void)linspace:(float)minVal max:(float)maxVal numElements:(int)size array:(float*)array {
+    
+    float step = (maxVal - minVal) / (size-1);
+    array[0] = minVal;
+    for (int i = 1; i < size-1 ;i++) {
+        array[i] = array[i-1] + step;
+    }
+    array[size-1] = maxVal;
+}
+@end
+
+#pragma mark -
+#pragma mark METScopeAxisView
+@interface METScopeAxisView : UIView
+@property METScopeView *parent;
+@end
+
+@implementation METScopeAxisView
+@synthesize parent;
+
+/* Create a transparent subview using the parent's frame */
+- (id)initWithParentView:(METScopeView *)parentView {
+    
+    CGRect frame = parentView.frame;
+    frame.origin.x = frame.origin.y = 0;
+
+    self = [super initWithFrame:frame];
+
+    if (self) {
+        [self setBackgroundColor:[UIColor clearColor]];
+        parent = parentView;
+    }
+    return self;
+}
+
+/* Draw axes */
+- (void)drawRect:(CGRect)rect {
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGPoint loc;            // Reusable current location
+    
+    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+    CGContextSetAlpha(context, 1.0);
+    CGContextSetLineWidth(context, 2.0);
+    
+    /* If the x-axis is within the plot's bounds */
+    if(parent.visiblePlotMin.y <= 0 && parent.visiblePlotMax.y >= 0) {
+        
+        loc = [parent plotScaleToPixel:parent.visiblePlotMin.x y:0.0];
+        
+        /* Draw the x-axis */
+        CGContextMoveToPoint(context, loc.x, loc.y);
+        CGContextAddLineToPoint(context, self.frame.size.width, loc.y);
+        CGContextStrokePath(context);
+        
+        /* Starting at the plot origin, draw ticks in the positive x direction */
+        loc = parent.originPixel;
+        while(loc.x <= self.bounds.size.width) {
+            
+            CGContextMoveToPoint(context, loc.x, loc.y - 3);
+            CGContextAddLineToPoint(context, loc.x, loc.y + 3);
+            CGContextStrokePath(context);
+            
+            loc.x += parent.tickPixels.x;
+        }
+        
+        /* Draw ticks in negative x direction */
+        loc = parent.originPixel;
+        while(loc.x >= 0) {
+            
+            CGContextMoveToPoint(context, loc.x, loc.y - 3);
+            CGContextAddLineToPoint(context, loc.x, loc.y + 3);
+            CGContextStrokePath(context);
+            
+            loc.x -= parent.tickPixels.x;
+        }
+    }
+    
+    /* If the y-axis is within the plot's bounds */
+    if(parent.visiblePlotMin.x <= 0 && parent.visiblePlotMax.x >= 0) {
+        
+        loc = [parent plotScaleToPixel:0.0 y:parent.visiblePlotMax.y];
+        
+        /* Draw the y-axis */
+        CGContextMoveToPoint(context, loc.x, loc.y);
+        CGContextAddLineToPoint(context, loc.x, self.frame.size.height);
+        CGContextStrokePath(context);
+        
+        /* Starting at the plot origin, draw ticks in the positive y direction */
+        loc = parent.originPixel;
+        while(loc.y <= self.bounds.size.height) {
+            
+            CGContextMoveToPoint(context, loc.x - 3, loc.y);
+            CGContextAddLineToPoint(context, loc.x + 3, loc.y);
+            CGContextStrokePath(context);
+            
+            loc.y += parent.tickPixels.y;
+        }
+        
+        /* Draw ticks in negative y direction */
+        loc = parent.originPixel;
+        while(loc.y >= 0) {
+            
+            CGContextMoveToPoint(context, loc.x - 3, loc.y);
+            CGContextAddLineToPoint(context, loc.x + 3, loc.y);
+            CGContextStrokePath(context);
+            
+            loc.y -= parent.tickPixels.y;
+        }
+    }
+}
+@end
+
+#pragma mark -
+#pragma mark METScopeGridView
+@interface METScopeGridView : UIView {
+    float gridDashLengths[2];
+}
+@property METScopeView *parent;
+@end
+
+@implementation METScopeGridView
+@synthesize parent;
+
+/* Create a transparent subview using the parent's frame */
+- (id)initWithParentView:(METScopeView *)parentView {
+    
+    CGRect frame = parentView.frame;
+    frame.origin.x = frame.origin.y = 0;
+    
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        [self setBackgroundColor:[UIColor clearColor]];
+        parent = parentView;
+        gridDashLengths[0] = self.bounds.size.width  / 100;
+        gridDashLengths[1] = self.bounds.size.height / 100;
+    }
+    return self;
+}
+
+- (void)drawRect:(CGRect)rect {
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGPoint loc;            // Reusable current location
+    
+    /* Dashed-line parameters */
+    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
+    CGContextSetAlpha(context, 0.5);
+    CGContextSetLineWidth(context, 0.5);
+    CGContextSetLineDash(context, M_PI, (CGFloat *)&gridDashLengths, 2);
+    
+    loc.y = 0;
+    loc.x = parent.originPixel.x;
+    
+    /* Draw in-bound vertical grid lines in positive x direction until we excede the frame width */
+    while (loc.x < 0) loc.x += parent.tickPixels.x;
+    while (loc.x <= self.bounds.size.width) {
+        
+        CGContextMoveToPoint(context, loc.x, loc.y);
+        CGContextAddLineToPoint(context, loc.x, self.bounds.size.height);
+        CGContextStrokePath(context);
+        
+        loc.x += parent.tickPixels.x;
+    }
+    
+    loc.y = 0;
+    loc.x = parent.originPixel.x;
+    
+    /* Draw in-bound vertical grid lines in negative x direction until we pass zero */
+    while (loc.x > self.bounds.size.width) loc.x -= parent.tickPixels.x;
+    while (loc.x >= 0) {
+        
+        CGContextMoveToPoint(context, loc.x, loc.y);
+        CGContextAddLineToPoint(context, loc.x, self.bounds.size.height);
+        CGContextStrokePath(context);
+        
+        loc.x -= parent.tickPixels.x;
+    }
+    
+    loc.x = 0;
+    loc.y = parent.originPixel.y;
+    
+    /* Draw in-bound horizontal grid lines in negative y direction until we excede the frame height */
+    while (loc.y < 0) loc.y += parent.tickPixels.y;
+    while (loc.y <= self.bounds.size.height) {
+        
+        CGContextMoveToPoint(context, loc.x, loc.y);
+        CGContextAddLineToPoint(context, self.bounds.size.width, loc.y);
+        CGContextStrokePath(context);
+        
+        loc.y += parent.tickPixels.y;
+    }
+    
+    loc.x = 0;
+    loc.y = parent.originPixel.y;
+    
+    /* Draw in-bound horizontal grid lines in positive y direction until we excede 0 */
+    while (loc.y > self.bounds.size.height) loc.y -= parent.tickPixels.y;
+    while (loc.y >= 0) {
+        
+        CGContextMoveToPoint(context, loc.x, loc.y);
+        CGContextAddLineToPoint(context, self.bounds.size.width, loc.y);
+        CGContextStrokePath(context);
+        
+        loc.y -= parent.tickPixels.y;
+    }
+}
+@end
+
+#pragma mark -
+#pragma mark METScopeLabelView
+@interface METScopeLabelView : UIView {
+    NSDictionary *labelAttributes;
+    CGPoint pixelOffset;
+}
+@property METScopeView *parent;
+@end
+
+@implementation  METScopeLabelView
+@synthesize parent;
+
+/* Create a transparent subview using the parent's frame */
+- (id)initWithParentView:(METScopeView *)parentView {
+    
+    CGRect frame = parentView.frame;
+    frame.origin.x = frame.origin.y = 0;
+    
+    self = [super initWithFrame:frame];
+    
+    if (self) {
+        [self setBackgroundColor:[UIColor clearColor]];
+        parent = parentView;
+        labelAttributes = @{NSFontAttributeName:[UIFont fontWithName:@"Arial" size:11],
+                            NSParagraphStyleAttributeName:[NSMutableParagraphStyle defaultParagraphStyle],
+                            NSForegroundColorAttributeName:[UIColor grayColor]};
+        pixelOffset = parentView.frame.origin;
+    }
+    return self;
+}
+
+- (void)drawRect:(CGRect)rect {
+    
+    if (parent.xLabelsOn)   [self drawXLabels];
+    if (parent.yLabelsOn)   [self drawYLabels];
+}
+
+- (void)drawXLabels {
+    
+    CGPoint loc;            // Current point in pixels
+    NSString *label;
+    
+    /* If the x-axis is within the plot's bounds */
+    if(parent.visiblePlotMin.y <= 0 && parent.visiblePlotMax.y >= 0) {
+        
+        /* Starting at the plot origin, add labels in the positive x direction */
+        loc = parent.originPixel;
+        loc.y += 2;
+        while(loc.x <= self.bounds.size.width) {
+            
+            loc.x += self.frame.origin.x;
+            label = [NSString stringWithFormat:parent.xLabelFormatString, [parent pixelToPlotScale:loc withOffset:pixelOffset].x];
+            loc.x -= self.frame.origin.x;
+            loc.x += 2;
+            [label drawAtPoint:loc withAttributes:labelAttributes];
+            loc.x -= 2;
+            loc.x += parent.tickPixels.x;
+        }
+        
+        /* Add labels in negative x direction */
+        loc = parent.originPixel;
+        loc.y += 2;
+        while(loc.x >= 0) {
+            
+            loc.x += self.frame.origin.x;
+            label = [NSString stringWithFormat:parent.xLabelFormatString, [parent pixelToPlotScale:loc withOffset:pixelOffset].x];
+            loc.x -= self.frame.origin.x;
+            loc.x += 2;
+            [label drawAtPoint:loc withAttributes:labelAttributes];
+            loc.x -= 2;
+            loc.x -= parent.tickPixels.x;
+        }
+    }
+}
+
+- (void)drawYLabels {
+    
+    CGPoint loc;        // Current points in pixels
+    NSString *label;
+    
+    /* If the y-axis is within the plot's bounds */
+    if(parent.visiblePlotMin.x <= 0 && parent.visiblePlotMax.x >= 0) {
+        
+        /* Starting at the plot origin, add labels in the positive y direction */
+        loc = parent.originPixel;
+        loc.x += 2;
+        while(loc.y <= self.bounds.size.height) {
+            
+            loc.y += self.frame.origin.y;
+            label = [NSString stringWithFormat:parent.yLabelFormatString, [parent pixelToPlotScale:loc withOffset:pixelOffset].y];
+            loc.y -= self.frame.origin.y;
+            loc.y -= 14;
+            [label drawAtPoint:loc withAttributes:labelAttributes];
+            loc.y += 14;
+            loc.y += parent.tickPixels.y;
+        }
+        
+        /* Add labels in negative y direction */
+        loc = parent.originPixel;
+        loc.x += 2;
+        while(loc.y >= 0) {
+            
+            loc.y += self.frame.origin.y;
+            label = [NSString stringWithFormat:parent.yLabelFormatString, [parent pixelToPlotScale:loc withOffset:pixelOffset].y];
+            loc.y -= self.frame.origin.y;
+            loc.y -= 14;
+            [label drawAtPoint:loc withAttributes:labelAttributes];
+            loc.y += 14;
+            loc.y -= parent.tickPixels.y;
+        }
+    }
+}
+@end
+
+#pragma mark -
+#pragma mark METScopeView
+/* Re-declare readonly properties as writable in the implementation to allow using synthesized setters, which are key-value observing compliant (i.e. will notify any observers of changes to the property values) */
+@interface METScopeView ()
+@property (readwrite) CGPoint visiblePlotMin;
+@property (readwrite) CGPoint visiblePlotMax;
+@end
+
 @implementation METScopeView
-
-@synthesize axesOn;
-@synthesize gridOn;
-@synthesize autoScaleGrid;
-@synthesize autoScaleXGrid;
-@synthesize autoScaleYGrid;
-@synthesize xLabelsOn;
-@synthesize yLabelsOn;
-@synthesize pinchZoomEnabled;
-@synthesize pinchZoomXEnabled;
-@synthesize pinchZoomYEnabled;
-@synthesize trackingOn;
-@synthesize trackingLevel;
-@synthesize samplingRate;
-
-@synthesize xLabelFormatString;
-@synthesize yLabelFormatString;
 
 @synthesize plotResolution;
 @synthesize displayMode;
+@synthesize axisScale;
 @synthesize visiblePlotMin;
 @synthesize visiblePlotMax;
 @synthesize minPlotMin;
 @synthesize maxPlotMax;
 @synthesize tickUnits;
+@synthesize tickPixels;
+@synthesize originPixel;
+@synthesize unitsPerPixel;
+@synthesize axesOn;
+@synthesize gridOn;
+@synthesize labelsOn;
+@synthesize delegate;
+@synthesize samplingRate;
+@synthesize xLabelFormatString;
+@synthesize yLabelFormatString;
+@synthesize xLabelsOn;
+@synthesize yLabelsOn;
+@synthesize xGridAutoScale;
+@synthesize yGridAutoScale;
+@synthesize xPinchZoomEnabled;
+@synthesize yPinchZoomEnabled;
 
 - (id)initWithFrame:(CGRect)frame {
     
@@ -61,10 +609,8 @@
 
 - (void)dealloc {
     
-    if (trackingBuffer != NULL)
-        free(trackingBuffer);
-    if (trackingError != NULL)
-        free(trackingError);
+    if (freqs != NULL)
+        free(freqs);
     if (inRealBuffer != NULL)
         free(inRealBuffer);
     if (outRealBuffer != NULL)
@@ -77,121 +623,84 @@
     
     [self setBackgroundColor:[UIColor whiteColor]];
     
-    /* Plot data, colors, linewidths, label attributes */
-    plotData = [[NSMutableArray alloc] init];
-    plotColors = [[NSMutableArray alloc] init];
-    lineWidths = [[NSMutableArray alloc] init];
-    labelAttributes = @{NSFontAttributeName:[UIFont fontWithName:@"Arial" size:10],
-                        NSParagraphStyleAttributeName:[NSMutableParagraphStyle defaultParagraphStyle],
-                        NSForegroundColorAttributeName:[UIColor grayColor]};
-    xLabelFormatString = METScopeView_Default_xLabelFormatString_TD;
-    yLabelFormatString = METScopeView_Default_yLabelFormatString_TD;
-    
-    /* Flags */
-    gridOn = true;
-    autoScaleGrid = false;
-    autoScaleXGrid = false;
-    autoScaleYGrid = false;
-    axesOn = true;
-    xLabelsOn = true;
-    yLabelsOn = true;
-    trackingOn = false;
-    pinchZoomEnabled = true;
-    pinchZoomXEnabled = true;
-    pinchZoomYEnabled = true;
-    
-    /* Default mode */
+    /* Default modes */
     displayMode = kMETScopeViewTimeDomainMode;
-    /* Frequency-domain mode needs sampling rate for x-axis scaling */
-    samplingRate = METScopeView_Default_SamplingRate;
+    axisScale = kMETScopeViewLinear;
     
-    /* Plot bounds, resolution, conversion factors */
+    /* ------------------ */
+    /* == Plot Scaling == */
+    /* ------------------ */
+    
     [self setPlotResolution:METScopeView_Default_PlotResolution];
     minPlotMin = CGPointMake(METScopeView_Default_XMin_TD, METScopeView_Default_YMin_TD);
     maxPlotMax = CGPointMake(METScopeView_Default_XMax_TD, METScopeView_Default_YMax_TD);
     tickUnits  = CGPointMake(METScopeView_Default_XTick_TD, METScopeView_Default_YTick_TD);
     [self setVisibleXLim:minPlotMin.x max:maxPlotMax.x];
     [self setVisibleYLim:minPlotMin.y max:maxPlotMax.y];
-    gridDashLengths[0] = self.bounds.size.width  / 100;
-    gridDashLengths[1] = self.bounds.size.height / 100;
     
-    /* Detect pinch gesture for zooming/panning */
+    /* Frequency-domain mode needs sampling rate for x-axis scaling */
+    samplingRate = METScopeView_Default_SamplingRate;
+    
+    /* ---------------- */
+    /* == Pinch Zoom == */
+    /* ---------------- */
+    
+    xPinchZoomEnabled = true;
+    yPinchZoomEnabled = true;
     pinchRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
     [self addGestureRecognizer:pinchRecognizer];
-    
-    /* Set up tracking settings and buffers */
-    trackingLevel = 0.5;
-    trackingBufferLength = 32;
-    trackingBuffer = (int *)calloc(trackingBufferLength, sizeof(int));
-    
-    trackingErrorLength = 2;
-    trackingErrorIdx = 0;
-    trackingError = (float *)malloc(trackingErrorLength * sizeof(int));
-    for (int i = 0; i < trackingErrorLength; i++)
-        trackingError[i] = INFINITY;
-    
-    doUpdate = true;        // Schedule initial update
-    maxRefreshRate = METScopeview_Default_MaxRefreshRate;  // Update interval
-    
-    pthread_mutex_init(&dataMutex, NULL);
-    
-    updateClock = [[NSTimer alloc] init];
-    [self setMaxRefreshRate:maxRefreshRate];
-}
 
-/* Check for updates at specified max refresh rate */
-- (void)updateIfScheduled {
-    if (doUpdate) {
-        [self setNeedsDisplay];
-        doUpdate = false;
-    }
+    /* ---------- */
+    /* == Axes == */
+    /* ---------- */
+    
+    axesOn = true;
+    axesSubview = [[METScopeAxisView alloc] initWithParentView:self];
+    [self addSubview:axesSubview];
+    
+    /* ---------- */
+    /* == Grid == */
+    /* ---------- */
+    
+    gridOn = true;
+    xGridAutoScale = false;
+    yGridAutoScale = false;
+    gridSubview = [[METScopeGridView alloc] initWithParentView:self];
+    [self addSubview:gridSubview];
+    
+    /* ------------ */
+    /* == Labels == */
+    /* ------------ */
+    
+    labelsOn = true;
+    xLabelsOn = true;
+    yLabelsOn = true;
+    xLabelFormatString = METScopeView_Default_xLabelFormatString_TD;
+    yLabelFormatString = METScopeView_Default_yLabelFormatString_TD;
+    labelsSubview = [[METScopeLabelView alloc] initWithParentView:self];
+    [self addSubview:labelsSubview];
+    
+    /* --------------- */
+    /* == Plot Data == */
+    /* --------------- */
+    plotDataSubviews = [[NSMutableArray alloc] init];
 }
 
 #pragma mark -
 #pragma mark Interface Methods
-/* Allocate input buffers of the specified length */
-//- (void)setInputBufferLength:(int)length {
-//    
-//    inputBufferLength = length;
-//    
-//    /* setDataAtIndex: uses the input buffers in the main thread */
-////    dispatch_sync(dispatch_get_main_queue(), ^{
-//        if (xBuffer != NULL)
-//            free(xBuffer);
-//        
-//        if (yBuffer != NULL)
-//            free(yBuffer);
-//        
-//        /* Input buffers */
-//        xBuffer = (float *)calloc(inputBufferLength, sizeof(float));
-//        yBuffer = (float *)calloc(inputBufferLength, sizeof(float));
-////    });
-//}
-
-/* Initialize a vDSP fft struct, buffers, windows, etc. */
-- (void)setUpFFTWithSize:(int)size {
+/* Set number of points sampled from incoming waveforms */
+- (void)setPlotResolution:(int)res {
     
-    fftSize = size;
+    plotResolution = res;   // Default plot resolution for new plot data subviews
     
-    scale = 1.0f / (float)(fftSize/2);     // Normalization constant
-    
-    /* Buffers */
-    inRealBuffer = (float *)malloc(fftSize * sizeof(float));
-    outRealBuffer = (float *)malloc(fftSize * sizeof(float));
-    splitBuffer.realp = (float *)malloc(fftSize/2 * sizeof(float));
-    splitBuffer.imagp = (float *)malloc(fftSize/2 * sizeof(float));
-    
-    /* Hann Window */
-    windowSize = size;
-    window = (float *)calloc(windowSize, sizeof(float));
-    vDSP_hann_window(window, windowSize, vDSP_HANN_NORM);
-    
-    /* Allocate the FFT struct */
-    fftSetup = vDSP_create_fftsetup(log2f(fftSize), FFT_RADIX2);
+    /* Update resoution for any existing subviews */
+    for (int i = 0; i < plotDataSubviews.count; i++) {
+        [((METScopePlotDataView *)plotDataSubviews[i]) setResolution:plotResolution];
+    }
 }
 
 /* Set the display mode to time/frequency domain and automatically rescale to default limits */
-- (void)setDisplayMode:(enum DisplayMode)mode {
+- (void)setDisplayMode:(DisplayMode)mode {
     
     if (mode == kMETScopeViewTimeDomainMode) {
         printf("Time domain mode\n");
@@ -215,17 +724,37 @@
         [self setVisibleXLim:minPlotMin.x max:maxPlotMax.x];
         [self setVisibleYLim:minPlotMin.y max:maxPlotMax.y];
         displayMode = mode;
-        trackingOn = false;
     }
+    
+    /* Update the subviews */
+    [axesSubview setNeedsDisplay];
+    [gridSubview setNeedsDisplay];
+    [labelsSubview setNeedsDisplay];
 }
 
-/* Set the interval at which the view checks the update flag */
-- (void)setMaxRefreshRate:(time_t)rate {
+/* Initialize a vDSP fft struct, buffers, windows, etc. */
+- (void)setUpFFTWithSize:(int)size {
     
-    [updateClock invalidate];       // Stop the old timer
+    fftSize = size;
     
-    /* Reset with new interval */
-    updateClock = [NSTimer scheduledTimerWithTimeInterval:rate target:self selector:@selector(updateIfScheduled) userInfo:nil repeats:YES];
+    scale = 1.0f / (float)(fftSize/2);     // Normalization constant
+    
+    /* Buffers */
+    freqs = (float *)malloc(fftSize/2 * sizeof(float));
+    [self linspace:0.0 max:samplingRate/2 numElements:fftSize/2 array:freqs];
+    
+    inRealBuffer = (float *)malloc(fftSize * sizeof(float));
+    outRealBuffer = (float *)malloc(fftSize * sizeof(float));
+    splitBuffer.realp = (float *)malloc(fftSize/2 * sizeof(float));
+    splitBuffer.imagp = (float *)malloc(fftSize/2 * sizeof(float));
+    
+    /* Hann Window */
+    windowSize = size;
+    window = (float *)calloc(windowSize, sizeof(float));
+    vDSP_hann_window(window, windowSize, vDSP_HANN_NORM);
+    
+    /* Allocate the FFT struct */
+    fftSetup = vDSP_create_fftsetup(log2f(fftSize), FFT_RADIX2);
 }
 
 /* Set x-axis hard limit constraining pinch zoom */
@@ -248,9 +777,9 @@
         NSLog(@"%s: Invalid x-axis limits", __PRETTY_FUNCTION__);
         return;
     }
-    
-    visiblePlotMin.x = xMin;
-    visiblePlotMax.x = xMax;
+
+    [self setVisiblePlotMin:CGPointMake(xMin, visiblePlotMin.y)];
+    [self setVisiblePlotMax:CGPointMake(xMax, visiblePlotMax.y)];
     
     /* Horizontal units per pixel */
     unitsPerPixel.x = (visiblePlotMax.x - visiblePlotMin.x) / self.frame.size.width;
@@ -267,8 +796,8 @@
         return;
     }
     
-    visiblePlotMin.y = yMin;
-    visiblePlotMax.y = yMax;
+    [self setVisiblePlotMin:CGPointMake(visiblePlotMin.x, yMin)];
+    [self setVisiblePlotMax:CGPointMake(visiblePlotMax.x, yMax)];
     
     /* Vertical units per pixel */
     unitsPerPixel.y = (visiblePlotMax.y - visiblePlotMin.y) / self.frame.size.height;
@@ -292,659 +821,196 @@
     }
     
     /* Rescale the grid to keep a specified number of ticks */
-    if (autoScaleGrid) {
-        
-        CGPoint ticksInFrame;
-        ticksInFrame.x = ((visiblePlotMax.x - visiblePlotMin.x) / xTick);
-        ticksInFrame.y = ((visiblePlotMax.y - visiblePlotMin.y) / yTick);
-    
-        if (autoScaleXGrid) {
-            if (ticksInFrame.x > METScopeView_AutoGrid_MaxXTicksInFrame)
-                tickUnits.x = xTick + (visiblePlotMax.x - visiblePlotMin.x) / 10;
-            else if (ticksInFrame.x < METScopeView_AutoGrid_MinXTicksInFrame) {
-                tickUnits.x = xTick - (visiblePlotMax.x - visiblePlotMin.x) / 10;
-            }
-            else tickUnits.x = xTick;
+    CGPoint ticksInFrame;
+    ticksInFrame.x = ((visiblePlotMax.x - visiblePlotMin.x) / xTick);
+    ticksInFrame.y = ((visiblePlotMax.y - visiblePlotMin.y) / yTick);
+
+    if (xGridAutoScale) {
+        if (ticksInFrame.x > METScopeView_AutoGrid_MaxXTicksInFrame)
+            tickUnits.x = xTick + (visiblePlotMax.x - visiblePlotMin.x) / 10;
+        else if (ticksInFrame.x < METScopeView_AutoGrid_MinXTicksInFrame) {
+            tickUnits.x = xTick - (visiblePlotMax.x - visiblePlotMin.x) / 10;
         }
         else tickUnits.x = xTick;
+    }
+    else
+        tickUnits.x = xTick;
 
-        if (autoScaleYGrid) {
-            if (ticksInFrame.y > METScopeView_AutoGrid_MaxYTicksInFrame)
-                tickUnits.y = yTick + (visiblePlotMax.y - visiblePlotMin.y) / 10;
-            else if (ticksInFrame.y < METScopeView_AutoGrid_MinYTicksInFrame) {
-                tickUnits.y = yTick - (visiblePlotMax.y - visiblePlotMin.y) / 10;
-            }
-            else tickUnits.y = yTick;
+    if (yGridAutoScale) {
+        if (ticksInFrame.y > METScopeView_AutoGrid_MaxYTicksInFrame)
+            tickUnits.y = yTick + (visiblePlotMax.y - visiblePlotMin.y) / 10;
+        else if (ticksInFrame.y < METScopeView_AutoGrid_MinYTicksInFrame) {
+            tickUnits.y = yTick - (visiblePlotMax.y - visiblePlotMin.y) / 10;
         }
         else tickUnits.y = yTick;
     }
-    else {
-        tickUnits.x = xTick;
+    else
         tickUnits.y = yTick;
-    }
+    
     tickPixels.x = tickUnits.x / unitsPerPixel.x;
     tickPixels.y = tickUnits.y / unitsPerPixel.y;
     
-    origin = [self plotScaleToPixel:0.0 y:0.0];
+    originPixel = [self plotScaleToPixel:0.0 y:0.0];
     
-    doUpdate = true;
+    /* Update all the subveiws */
+    [axesSubview setNeedsDisplay];
+    [gridSubview setNeedsDisplay];
+    [labelsSubview setNeedsDisplay];
+    
+    for (int i = 0; i < plotDataSubviews.count; i++) {
+        [((METScopePlotDataView *)plotDataSubviews[i]) rescalePlotData];
+        [((METScopePlotDataView *)plotDataSubviews[i]) setNeedsDisplay];
+    }
 }
 
-/* Set axis on/off, update the view */
-- (void)toggleAxes {
+/* Set the axesOn property, adding or removing the subview if necessary */
+- (void)setAxesOn:(bool)pAxesOn {
     
-    if(axesOn)  axesOn = false;
-    else        axesOn = true;
+    if (axesOn == pAxesOn)
+        return;
     
-    doUpdate = true;
-}
-
-/* Set grid on/off, update the view */
-- (void)toggleGrid {
+    axesOn = pAxesOn;
     
-    if(gridOn)  gridOn = false;
-    else        gridOn = true;
-    
-    doUpdate = true;
-}
-
-/* Set labels on/off, update the view */
-- (void)toggleLabels {
-    
-    if (xLabelsOn | yLabelsOn) {
-        xLabelsOn = false;
-        yLabelsOn = false;
+    if (!axesOn) {
+        [axesSubview removeFromSuperview];
     }
     else {
-        xLabelsOn = true;
-        yLabelsOn = true;
+        [self addSubview:axesSubview];
+    }
+}
+
+/* Set the gridOn property, adding or removing the subview if necessary */
+- (void)setGridOn:(bool)pGridOn {
+    
+    if (gridOn == pGridOn)
+        return;
+    
+    gridOn = pGridOn;
+    
+    if (!gridOn) {
+        [gridSubview removeFromSuperview];
+    }
+    else {
+        [self addSubview:gridSubview];
+    }
+}
+
+/* Set the labelsOn property, adding or removing the subview if necessary */
+- (void)setLabelsOn:(bool)pLabelsOn {
+    
+    if (labelsOn == pLabelsOn)
+        return;
+    
+    labelsOn = pLabelsOn;
+    
+    if (!labelsOn) {
+        [labelsSubview removeFromSuperview];
+    }
+    else {
+        [self addSubview:labelsSubview];
+    }
+}
+
+/* Allocate a subview for new plot data with specified color/linewidth, return the index */
+- (int)addPlotWithColor:(UIColor *)color lineWidth:(float)width {
+    
+    return [self addPlotWithResolution:self.plotResolution color:color lineWidth:width];
+}
+
+/* Allocate a subview with a specified resolution */
+- (int)addPlotWithResolution:(int)res color:(UIColor *)color lineWidth:(float)width {
+    
+    METScopePlotDataView *newSub;
+    newSub = [[METScopePlotDataView alloc] initWithParentView:self
+                                                   resolution:res
+                                                    plotColor:color
+                                                    lineWidth:width];
+    [plotDataSubviews addObject:newSub];
+    [self addSubview:newSub];
+    
+    return (plotDataSubviews.count - 1);
+}
+
+/* Set the plot data for a subview at a specified index */
+- (void)setPlotDataAtIndex:(int)idx withLength:(int)len xData:(float *)xx yData:(float *)yy {
+    
+    /* Sanity check */
+    if (idx < 0 || idx >= plotDataSubviews.count) {
+        NSLog(@"Invalid plot data index %d\nplotDataSubviews.count = %lu", idx, (unsigned long)plotDataSubviews.count);
+        return;
     }
     
-    doUpdate = true;
-}
-- (void)toggleXLabels {
+    /* Get the subview */
+    METScopePlotDataView *subView = plotDataSubviews[idx];
     
-    if (xLabelsOn)
-        xLabelsOn = false;
-    else
-        xLabelsOn = true;
+    /* Time-domain mode: just pass the waveform */
+    if (displayMode == kMETScopeViewTimeDomainMode)
+        [subView setDataWithLength:len xData:xx yData:yy];
     
-    doUpdate = true;
-}
-- (void)toggleYLabels {
-    
-    if (yLabelsOn)
-        yLabelsOn = false;
-    else
-        yLabelsOn = true;
-    
-    doUpdate = true;
-}
+    /* Frequency-domain mode: perform FFT, pass magnitude */
+    else if (displayMode == kMETScopeViewFrequencyDomainMode) {
 
-- (void)togglePinchZoom {
-    
-    if (pinchZoomEnabled)
-        pinchZoomEnabled = false;
-    else
-        pinchZoomEnabled = true;
-}
-
-- (void)togglePinchZoom:(char)axis {
-    
-    if (axis == 'x') {
-        if (pinchZoomXEnabled)
-            pinchZoomXEnabled = false;
-        else
-            pinchZoomXEnabled = true;
-    }
-    else if (axis == 'y') {
-        if (pinchZoomYEnabled)
-            pinchZoomYEnabled = false;
-        else
-            pinchZoomYEnabled = true;
-    }
-    else
-        NSLog(@"%s: Invalid axis. Specify 'x' or 'y' only.", __PRETTY_FUNCTION__);
-    
-    /* If both axes are disabled, disable pinch zooming in general. Saves computation time in handlePinch() method */
-    if (!pinchZoomXEnabled && !pinchZoomYEnabled)
-        pinchZoomEnabled = false;
-    
-    else if (pinchZoomXEnabled || pinchZoomYEnabled)
-        pinchZoomEnabled = true;
-}
-
-- (void)toggleAutoGrid {
-    
-    if (autoScaleGrid)
-        autoScaleGrid = false;
-    else
-        autoScaleGrid = true;
-}
-
-- (void)toggleAutoGrid:(char)axis {
-    
-    if (axis == 'x') {
-        if (autoScaleXGrid)
-            autoScaleXGrid = false;
-        else
-            autoScaleXGrid = true;
-    }
-    else if (axis == 'y') {
-        if (autoScaleYGrid)
-            autoScaleYGrid = false;
-        else
-            autoScaleYGrid = true;
-    }
-    else
-        NSLog(@"%s: Invalid axis. Specify 'x' or 'y' only.", __PRETTY_FUNCTION__);
-    
-    /* If both axes are disabled, disable auto grid scaling altogether */
-    if (!autoScaleXGrid && !autoScaleYGrid)
-        autoScaleGrid = false;
-    
-    else if (autoScaleXGrid || autoScaleYGrid)
-        autoScaleGrid = true;
-}
-
-/* Append new plot data to the array */
-- (void)appendDataWithLength:(int)length xData:(float *)xx yData:(float *)yy {
-    [self setDataAtIndex:-1 withLength:length xData:xx yData:yy color:[UIColor blueColor] lineWidth:1.0];
-}
-
-/* Append new plot data to the array with a specified color */
-- (void)appendDataWithLength:(int)length xData:(float *)xx yData:(float *)yy color:(UIColor *)color {
-    [self setDataAtIndex:-1 withLength:length xData:xx yData:yy color:color lineWidth:1.0];
-}
-
-/* Append new plot data to the array with a specified color and line width */
-- (void)appendDataWithLength:(int)length xData:(float *)xx yData:(float *)yy color:(UIColor *)color lineWidth:(float)width {
-    [self setDataAtIndex:-1 withLength:length xData:xx yData:yy color:color lineWidth:width];
-}
-
-/* Update plot data at a specified index in the array */
-- (void)setDataAtIndex:(int)index withLength:(int)length xData:(float *)xx yData:(float *)yy {
-    [self setDataAtIndex:index withLength:length xData:xx yData:yy color:[UIColor blueColor] lineWidth:1.0];
-}
-
-/* Update plot data at a specified index in the array with a specified color */
-- (void)setDataAtIndex:(int)index withLength:(int)length xData:(float *)xx yData:(float *)yy color:(UIColor *)color {
-    [self setDataAtIndex:index withLength:length xData:xx yData:yy color:color lineWidth:1.0];
-}
-
-/* Update plot data at a specified index in the array with a specified color and line width */
-- (void)setDataAtIndex:(int)index withLength:(int)length xData:(float *)xx yData:(float *)yy color:(UIColor *)color lineWidth:(float)width {
-    
-    float *xBuffer = (float *)calloc(length, sizeof(float));
-    float *yBuffer = (float *)calloc(length, sizeof(float));
-
-    /* Perform an FFT if we're in frequency domain mode */
-    if (displayMode == kMETScopeViewFrequencyDomainMode) {
-        
+        float *yBuffer = (float *)calloc(len, sizeof(float));
         [self computeMagnitudeFFT:yy outMagnitude:yBuffer seWindow:false];
-        [self linspace:0.0 max:samplingRate/2 numElements:fftSize/2 array:xBuffer];
+        [subView setDataWithLength:len xData:freqs yData:yBuffer];
+        free(yBuffer);
     }
-    /* Otherwise, just copy into the input plot data buffers */
-    else {
-        memcpy(xBuffer, xx, length*sizeof(float));
-        memcpy(yBuffer, yy, length*sizeof(float));
-    }
+}
+
+/* Set raw coordinates (plot units) while in frequency domain mode without taking the FFT */
+- (void)setCoordinatesInFDModeAtIndex:(int)idx withLength:(int)len xData:(float *)xx yData:(float *)yy {
     
-    int startingIdx = 0;
+    /* Get the subview and set its data */
+    METScopePlotDataView *subView = plotDataSubviews[idx];
+    [subView setDataWithLength:len xData:xx yData:yy];
+}
+
+/* Set the visiblility of waveform subviews */
+- (void)setVisibilityAtIndex:(int)idx visible:(bool)visible {
     
-    if (trackingOn)
-        startingIdx = [self getStableStartingIndex:yBuffer length:length];
-    
-    NSMutableArray *newData = [NSMutableArray arrayWithCapacity:plotResolution];
-    
-    /* If the waveform has more samples than the plot resolution, resample the waveform */
-    if (length - startingIdx > plotResolution) {
-        
-        float *indices = (float *)malloc(plotResolution * sizeof(float));
-        [self linspace:startingIdx max:length numElements:plotResolution array:indices];
-        
-        int idx;
-        for (int i = 0; i < plotResolution; i++) {
-            
-            idx = (int)round(indices[i]);
-            [newData insertObject:[NSValue valueWithCGPoint:
-                                   CGPointMake(xBuffer[idx] - xBuffer[startingIdx], yBuffer[idx])]
-                          atIndex:i];
-        }
-        
-        free(indices);
-    }
-    
-    /* If the waveform has fewer samples than the plot resolution, interpolate the waveform */
-    else if (length < plotResolution) {
-        
-        /* Get $plotResolution$ linearly-spaced x-values */
-        float *targetXVals = (float *)malloc(plotResolution * sizeof(float));
-        [self linspace:xBuffer[0] max:xBuffer[length-1] numElements:plotResolution array:targetXVals];
-        
-        CGPoint current, next, target;
-        float perc;
-        int j = 0;
-        for (int i = 0; i < length-1; i++) {
-            
-            current.x = xBuffer[i];
-            current.y = yBuffer[i];
-            next.x = xBuffer[i+1];
-            next.y = yBuffer[i+1];
-            target.x = targetXVals[j];
-            
-            while (target.x < next.x) {
-                perc = (target.x - current.x) / (next.x - current.x);
-                target.y = current.y * (1-perc) + next.y * perc;
-                [newData addObject:[NSValue valueWithCGPoint:target]];
-                j++;
-                target.x = targetXVals[j];
-            }
-        }
-        
-        current.x = xBuffer[length-2];
-        current.y = yBuffer[length-2];
-        next.x = xBuffer[length-1];
-        next.y = yBuffer[length-1];
-        target.x = targetXVals[j];
-        
-        while (j < plotResolution) {
-            j++;
-            perc = (target.x - current.x) / (next.x - current.x);
-            target.y = current.y * (1-perc) + next.y * perc;
-            [newData addObject:[NSValue valueWithCGPoint:target]];
-        }
-        
-        free(targetXVals);
-    }
-    
-    /* If waveform has number of samples == plot resolution, just copy */
-    else {
-        for (int i = 0; i < length; i++) {
-            [newData insertObject:[NSValue valueWithCGPoint:
-                                   CGPointMake(xBuffer[i], yBuffer[i])]
-                          atIndex:i];
-        }
-    }
-    
-    pthread_mutex_lock(&dataMutex);
-    
-    /* Append new waveform for index -1 */
-    if (index == -1) {
-        [plotData addObject:newData];
-        [plotColors addObject:color];
-        [lineWidths addObject:[NSNumber numberWithFloat:width]];
-    }
-    /* Append for index i if plot has i-1 waveforms */
-    else if (index == [plotData count]) {
-        [plotData addObject:newData];
-        [plotColors addObject:color];
-        [lineWidths addObject:[NSNumber numberWithFloat:width]];
-    }
-    /* Otherwise, replace plot data at the specified index */
-    else if (index >= 0 && index < [plotData count]) {
-//        @synchronized (plotData[index]) {
-            [plotData replaceObjectAtIndex:index withObject:newData];
-//        }
-//        @synchronized (plotColors[index]) {
-            [plotColors replaceObjectAtIndex:index withObject:color];
-//        }
-//        @synchronized (lineWidths[index]) {
-            [lineWidths addObject:[NSNumber numberWithFloat:width]];
-//        }
-    }
+    if (idx > 0 && idx < plotDataSubviews.count)
+        ((METScopePlotDataView *)plotDataSubviews[idx]).visible = visible;
     else
-        NSLog(@"Invalid plot data index %d\n[plotData count] = %lu", index, (unsigned long)[plotData count]);
-    
-    pthread_mutex_unlock(&dataMutex);
-    
-    free(xBuffer);
-    free(yBuffer);
-    
-    doUpdate = true;
+        NSLog(@"Invalid plot data index %d\nplotDataSubviews.count = %lu", idx, (unsigned long)plotDataSubviews.count);
 }
 
-/* Set/update plot color for a waveform at some index */
-- (void)setPlotColor:(UIColor *)color atIndex:(int)index {
+/* Update plot color for a waveform at a specified index */
+- (void)setPlotColor:(UIColor *)color atIndex:(int)idx {
     
-    if (index > 0 && index < [plotColors count])
-        [plotColors replaceObjectAtIndex:index withObject:color];
+    if (idx > 0 && idx < plotDataSubviews.count)
+        ((METScopePlotDataView *)plotDataSubviews[idx]).lineColor = color;
+    else
+        NSLog(@"Invalid plot data index %d\nplotDataSubviews.count = %lu", idx, (unsigned long)plotDataSubviews.count);
 }
 
-/* Set/update line width for a waveform at some index */
-- (void)setLineWidth:(float)width atIndex:(int)index {
+/* Update line width for a waveform at a specified index */
+- (void)setLineWidth:(float)width atIndex:(int)idx {
     
-    if (index > 0 && index < [lineWidths count])
-        [lineWidths replaceObjectAtIndex:index withObject:[NSNumber numberWithFloat:width]];
+    if (idx > 0 && idx < plotDataSubviews.count)
+        ((METScopePlotDataView *)plotDataSubviews[idx]).lineWidth = width;
+    else
+        NSLog(@"Invalid plot data index %d\nplotDataSubviews.count = %lu", idx, (unsigned long)plotDataSubviews.count);
 }
 
-#pragma mark -
-#pragma mark Render Methods
-/* Main render method */
-- (void)drawRect:(CGRect)rect {
+/* Update line width for a waveform at a specified index */
+- (void)setPlotResolution:(int)res atIndex:(int)idx {
     
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGPoint current;                // Reusable current point
-    
-    pthread_mutex_lock(&dataMutex);
-    
-    int nWaveforms = (int)[plotData count];
-    
-    /* Keep nWaveforms previous points (in plot units) for each waveform */
-    NSMutableArray *previous = [[NSMutableArray alloc] initWithCapacity:nWaveforms];
-    for(int n = 0; n < nWaveforms; n++) {
-        
-//        @synchronized (plotData[n]) {
-        
-        /* Get first index from each waveform */
-        current = [self plotScaleToPixel:[plotData[n][0] CGPointValue]];
-        [previous addObject:[NSValue valueWithCGPoint:current]];
-//        }
-    }
-    
-    /* Draw on the view from left to right, cycling through each waveform in the inner loop. Doesn't work the other way around for some reason */
-    for (int i = 1; i < plotResolution-2; i++) {
-        
-        for (int n = 0; n < nWaveforms; n++) {
-            
-//            @synchronized (plotData[n]) {
-                /* Current point: n^th waveform, i^th sample */
-                current = [self plotScaleToPixel:[plotData[n][i] CGPointValue]];
-                
-                CGContextBeginPath(context);
-                
-                /* Set color and line width */
-//                @synchronized (plotColors[n]) {
-                    CGContextSetStrokeColorWithColor(context, ((UIColor *)[plotColors objectAtIndex:n]).CGColor);
-//                }
-//                @synchronized (lineWidths[n]) {
-                    CGContextSetLineWidth(context, [[lineWidths objectAtIndex:n] floatValue]);
-//                }
-                
-                /* Append line from previous point to current point */
-                CGContextMoveToPoint(context, [previous[n] CGPointValue].x, [previous[n] CGPointValue].y);
-                CGContextAddLineToPoint(context, current.x, current.y);
-                
-                /* Draw */
-                CGContextStrokePath(context);
-                
-                /* Current point becomes the previous point */
-                [previous replaceObjectAtIndex:n withObject:[NSValue valueWithCGPoint:current]];
-            }
-        }
-    
-    pthread_mutex_unlock(&dataMutex);
-    
-    if (axesOn)     [self drawAxes];
-    if (xLabelsOn)  [self drawXLabels];
-    if (yLabelsOn)  [self drawYLabels];
-    if (trackingOn) [self drawTrackingLevel];
-    if (gridOn)     [self drawGrid];
+    if (idx > 0 && idx < plotDataSubviews.count)
+        ((METScopePlotDataView *)plotDataSubviews[idx]).resolution = res;
+    else
+        NSLog(@"Invalid plot data index %d\nplotDataSubviews.count = %lu", idx, (unsigned long)plotDataSubviews.count);
 }
 
-- (void)drawAxes {
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGPoint loc;            // Reusable current location
-    
-    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
-    CGContextSetAlpha(context, 1.0);
-    CGContextSetLineWidth(context, 2.0);
-    
-    /* If the x-axis is within the plot's bounds */
-    if(visiblePlotMin.y <= 0 && visiblePlotMax.y >= 0) {
-        
-        loc = [self plotScaleToPixel:visiblePlotMin.x y:0.0];
-        
-        /* Draw the x-axis */
-        CGContextMoveToPoint(context, loc.x, loc.y);
-        CGContextAddLineToPoint(context, self.frame.size.width, loc.y);
-        CGContextStrokePath(context);
-        
-        /* Starting at the plot origin, draw ticks in the positive x direction */
-        loc = origin;
-        while(loc.x <= self.bounds.size.width) {
-            
-            CGContextMoveToPoint(context, loc.x, loc.y - 3);
-            CGContextAddLineToPoint(context, loc.x, loc.y + 3);
-            CGContextStrokePath(context);
-            
-            loc.x += tickPixels.x;
-        }
-        
-        /* Draw ticks in negative x direction */
-        loc = origin;
-        while(loc.x >= 0) {
-            
-            CGContextMoveToPoint(context, loc.x, loc.y - 3);
-            CGContextAddLineToPoint(context, loc.x, loc.y + 3);
-            CGContextStrokePath(context);
-            
-            loc.x -= tickPixels.x;
-        }
-    }
-    
-    /* If the y-axis is within the plot's bounds */
-    if(visiblePlotMin.x <= 0 && visiblePlotMax.x >= 0) {
-        
-        loc = [self plotScaleToPixel:0.0 y:visiblePlotMax.y];
-        
-        /* Draw the y-axis */
-        CGContextMoveToPoint(context, loc.x, loc.y);
-        CGContextAddLineToPoint(context, loc.x, self.frame.size.height);
-        CGContextStrokePath(context);
-        
-        /* Starting at the plot origin, draw ticks in the positive y direction */
-        loc = origin;
-        while(loc.y <= self.bounds.size.height) {
-            
-            CGContextMoveToPoint(context, loc.x - 3, loc.y);
-            CGContextAddLineToPoint(context, loc.x + 3, loc.y);
-            CGContextStrokePath(context);
-            
-            loc.y += tickPixels.y;
-        }
-        
-        /* Draw ticks in negative y direction */
-        loc = origin;
-        while(loc.y >= 0) {
-            
-            CGContextMoveToPoint(context, loc.x - 3, loc.y);
-            CGContextAddLineToPoint(context, loc.x + 3, loc.y);
-            CGContextStrokePath(context);
-            
-            loc.y -= tickPixels.y;
-        }
-    }
-}
-
-- (void)drawXLabels {
-    
-    CGPoint loc;            // Current point in pixels
-    NSString *label;
-    
-    /* If the x-axis is within the plot's bounds */
-    if(visiblePlotMin.y <= 0 && visiblePlotMax.y >= 0) {
-        
-        /* Starting at the plot origin, add labels in the positive x direction */
-        loc = origin;
-        loc.y += 2;
-        while(loc.x <= self.bounds.size.width) {
-            
-            loc.x += self.frame.origin.x;
-            label = [NSString stringWithFormat:xLabelFormatString, [self pixelToPlotScale:loc].x];
-            loc.x -= self.frame.origin.x;
-            loc.x += 2;
-            [label drawAtPoint:loc withAttributes:labelAttributes];
-            loc.x -= 2;
-            loc.x += tickPixels.x;
-        }
-        
-        /* Add labels in negative x direction */
-        loc = origin;
-        loc.y += 2;
-        while(loc.x >= 0) {
-            
-            loc.x += self.frame.origin.x;
-            label = [NSString stringWithFormat:xLabelFormatString, [self pixelToPlotScale:loc].x];
-            loc.x -= self.frame.origin.x;
-            loc.x += 2;
-            [label drawAtPoint:loc withAttributes:labelAttributes];
-            loc.x -= 2;
-            loc.x -= tickPixels.x;
-        }
-    }
-}
-
-- (void)drawYLabels {
-    
-    CGPoint loc;        // Current points in pixels
-    NSString *label;
-    
-    /* If the y-axis is within the plot's bounds */
-    if(visiblePlotMin.x <= 0 && visiblePlotMax.x >= 0) {
-        
-        /* Starting at the plot origin, add labels in the positive y direction */
-        loc = origin;
-        loc.x += 2;
-        while(loc.y <= self.bounds.size.height) {
-            
-            loc.y += self.frame.origin.y;
-            label = [NSString stringWithFormat:yLabelFormatString, [self pixelToPlotScale:loc].y];
-            loc.y -= self.frame.origin.y;
-            loc.y -= 14;
-            [label drawAtPoint:loc withAttributes:labelAttributes];
-            loc.y += 14;
-            loc.y += tickPixels.y;
-        }
-        
-        /* Add labels in negative y direction */
-        loc = origin;
-        loc.x += 2;
-        while(loc.y >= 0) {
-            
-            loc.y += self.frame.origin.y;
-            label = [NSString stringWithFormat:yLabelFormatString, [self pixelToPlotScale:loc].y];
-            loc.y -= self.frame.origin.y;
-            loc.y -= 14;
-            [label drawAtPoint:loc withAttributes:labelAttributes];
-            loc.y += 14;
-            loc.y -= tickPixels.y;
-        }
-    }
-}
-
-- (void)drawGrid {
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGPoint loc;            // Reusable current location
-    
-    /* Dashed-line parameters */
-    CGContextSetStrokeColorWithColor(context, [UIColor blackColor].CGColor);
-    CGContextSetAlpha(context, 0.5);
-    CGContextSetLineWidth(context, 0.5);
-    CGContextSetLineDash(context, M_PI, (CGFloat *)&gridDashLengths, 2);
-    
-    loc.y = 0;
-    loc.x = origin.x;
-    
-    /* Draw in-bound vertical grid lines in positive x direction until we excede the frame width */
-    while (loc.x < 0) loc.x += tickPixels.x;
-    while (loc.x <= self.bounds.size.width) {
-        
-        CGContextMoveToPoint(context, loc.x, loc.y);
-        CGContextAddLineToPoint(context, loc.x, self.bounds.size.height);
-        CGContextStrokePath(context);
-        
-        loc.x += tickPixels.x;
-    }
-    
-    loc.y = 0;
-    loc.x = origin.x;
-    
-    /* Draw in-bound vertical grid lines in negative x direction until we pass zero */
-    while (loc.x > self.bounds.size.width) loc.x -=tickPixels.x;
-    while (loc.x >= 0) {
-        
-        CGContextMoveToPoint(context, loc.x, loc.y);
-        CGContextAddLineToPoint(context, loc.x, self.bounds.size.height);
-        CGContextStrokePath(context);
-        
-        loc.x -= tickPixels.x;
-    }
-    
-    loc.x = 0;
-    loc.y = origin.y;
-    
-    /* Draw in-bound horizontal grid lines in negative y direction until we excede the frame height */
-    while (loc.y < 0) loc.y += tickPixels.y;
-    while (loc.y <= self.bounds.size.height) {
-        
-        CGContextMoveToPoint(context, loc.x, loc.y);
-        CGContextAddLineToPoint(context, self.bounds.size.width, loc.y);
-        CGContextStrokePath(context);
-        
-        loc.y += tickPixels.y;
-    }
-    
-    loc.x = 0;
-    loc.y = origin.y;
-    
-    /* Draw in-bound horizontal grid lines in positive y direction until we excede 0 */
-    while (loc.y > self.bounds.size.height) loc.y -= tickPixels.y;
-    while (loc.y >= 0) {
-        
-        CGContextMoveToPoint(context, loc.x, loc.y);
-        CGContextAddLineToPoint(context, self.bounds.size.width, loc.y);
-        CGContextStrokePath(context);
-        
-        loc.y -= tickPixels.y;
-    }
-}
-
-- (void)drawTrackingLevel {
-    
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGPoint loc;            // Reusable current location
-    
-    CGContextSetStrokeColorWithColor(context, [UIColor orangeColor].CGColor);
-    CGContextSetAlpha(context, 1.0);
-    CGContextSetLineWidth(context, 2.0);
-    
-    /* Draw tracking level on the y-axis */
-    loc = [self plotScaleToPixel:0.0 y:trackingLevel];
-    
-    /* If the y-axis is outside the plot's bounds, put the tracking level at the plot xMin */
-    if(visiblePlotMin.x >= 0 || visiblePlotMax.x <= 0) {
-        loc.x = self.bounds.origin.x + 10;
-    }
-    
-    CGContextBeginPath(context);
-    CGContextMoveToPoint(context, loc.x, loc.y);
-    loc.x -= 5;
-    loc.y += 5;
-    CGContextAddLineToPoint(context, loc.x, loc.y);
-    CGContextStrokePath(context);
-    
-    CGContextBeginPath(context);
-    CGContextMoveToPoint(context, loc.x, loc.y);
-    loc.y -= 10;
-    CGContextAddLineToPoint(context, loc.x, loc.y);
-    CGContextStrokePath(context);
-    
-    CGContextBeginPath(context);
-    CGContextMoveToPoint(context, loc.x, loc.y);
-    loc.x += 5;
-    loc.y += 5;
-    CGContextAddLineToPoint(context, loc.x, loc.y);
-    CGContextStrokePath(context);
+/* Get the x-axis (frequency) values for a frequency-domain mode plot */
+- (void)getFreqs:(float *)outFreqs {
+    memcpy(outFreqs, freqs, (fftSize/2 * sizeof(float)));
 }
 
 #pragma mark -
 #pragma mark Gesture Handlers
 - (void)handlePinch:(UIPinchGestureRecognizer *)sender {
     
-    if (!pinchZoomEnabled)
+    if (!xPinchZoomEnabled && !yPinchZoomEnabled)
         return;
     
     /* If the number of touches became 1, save the current remaining touch location at index 0 and wait until the number of touches goes from 1 to 2, and overwrite the old previous touch location at index 1 with a new incoming touch location to restart the pinch with the correct previous touch location */
@@ -983,6 +1049,12 @@
         previousPinchTouches[1] = touches[1];
     }
     
+    /* Send the new plot limits to any delegate listeners */
+    else if (sender.state == UIGestureRecognizerStateEnded) {
+        if (delegate)
+            [delegate finishedPinchZoom];
+    }
+    
     /* Otherwise, expand/contract the plot bounds */
     else {
         
@@ -1004,14 +1076,17 @@
         float newYMax = visiblePlotMax.y + pixelShift[1].y * unitsPerPixel.y;
         
         /* Rescale if we're within the hard limit */
-        if (pinchZoomXEnabled && newXMin > minPlotMin.x && newXMax < maxPlotMax.x)
+        if (xPinchZoomEnabled && newXMin > minPlotMin.x && newXMax < maxPlotMax.x)
             [self setVisibleXLim:newXMin max:newXMax];
-        if (pinchZoomYEnabled && newYMin > minPlotMin.y && newYMax < maxPlotMax.y)
+        if (yPinchZoomEnabled && newYMin > minPlotMin.y && newYMax < maxPlotMax.y)
             [self setVisibleYLim:newYMin max:newYMax];
         
         previousPinchTouches[0] = touches[0];
         previousPinchTouches[1] = touches[1];
     }
+    
+    if (delegate)
+        [delegate finishedPinchZoom];
 }
 
 /* UIGestureRecognizerDelegate method to enable simultaneous gesture recognition if any gesture recognizers are attached externally */
@@ -1021,61 +1096,23 @@
 
 #pragma mark -
 #pragma mark Utility methods
-/* Oscilloscope-style triggering for waveform stabilization */
-- (int)getStableStartingIndex:(float *)waveform length:(int)length {
-    
-    int retVal = 0;
-    int indices[trackingBufferLength];
-    float errSum = 0;
-    
-    int i = 0;
-    int j = 0;
-    while (j < trackingBufferLength && i < length-1) {
-        
-        /* Find the frist $trackingBufferLength$ indices where a rising edge passes the tracking level */
-        if (waveform[i] < trackingLevel && waveform[i+1] > trackingLevel) {
-            
-            indices[j] = i;         // Current index
-            
-            /* Error between previous tracking buffer and the current */
-            errSum += fabs(indices[j] - trackingBuffer[j]);
-            
-            trackingBuffer[j] = j;  // New previous index
-            j++;
-        }
-        i++;
-    }
-    
-    /* Look for troughs in a circular buffer of tracking errors */
-    trackingError[trackingErrorIdx] = errSum;
-    
-    bool success = true;
-    for (int i = trackingErrorIdx, j = 0; j < trackingErrorLength-1; i--, j++) {
-        
-        if (i <= 0)
-            i = trackingErrorLength-1;
-        
-        /* Detect when we're exiting a trough (positive first differences for the entire buffer length) */
-        if (trackingError[i] < trackingError[i-1])
-            success = false;
-    }
-    
-    trackingErrorIdx++;
-    if (trackingErrorIdx >= trackingErrorLength)
-        trackingErrorIdx = 0;
-    
-    if (success && indices[0] < length && indices[0] > 0)
-        retVal = indices[0];
-    
-    return retVal;
-}
 
 /* Return a pixel location in the view for a given plot-scale value */
 - (CGPoint)plotScaleToPixel:(float)pX y:(float)pY {
     
     CGPoint retVal;
     
-    retVal.x = self.frame.size.width * (pX - visiblePlotMin.x) / (visiblePlotMax.x - visiblePlotMin.x);
+    if (axisScale == kMETScopeViewLinear) {
+        retVal.x = self.frame.size.width * (pX - visiblePlotMin.x) / (visiblePlotMax.x - visiblePlotMin.x);
+    }
+    
+    else if (axisScale == kMETScopeViewSemilogX) {
+        
+        float m = self.frame.size.width / log10(visiblePlotMax.x / visiblePlotMin.x);
+        
+        retVal.x = m * log10(fmax(pX,0.01) / visiblePlotMin.x);
+    }
+    
     retVal.y = self.frame.size.height * (1 - (pY - visiblePlotMin.y) / (visiblePlotMax.y - visiblePlotMin.y));
     
     return retVal;
@@ -1083,21 +1120,18 @@
 
 /* Return a pixel location in the view for a given plot-scale value */
 - (CGPoint)plotScaleToPixel:(CGPoint)plotScale {
-    
-    CGPoint pixelVal;
-    
-    pixelVal.x = self.frame.size.width * (plotScale.x - visiblePlotMin.x) / (visiblePlotMax.x - visiblePlotMin.x);
-    pixelVal.y = self.frame.size.height * (1 - (plotScale.y - visiblePlotMin.y) / (visiblePlotMax.y - visiblePlotMin.y));
-    
-    return pixelVal;
+    return [self plotScaleToPixel:plotScale.x y:plotScale.y];
 }
 
 /* Return a plot-scale value for a given pixel location in the view */
-- (CGPoint)pixelToPlotScale:(CGPoint)point {
+- (CGPoint)pixelToPlotScale:(CGPoint)pixel {
+    return [self pixelToPlotScale:pixel withOffset:CGPointMake(0.0, 0.0)];
+}
+- (CGPoint)pixelToPlotScale:(CGPoint)pixel withOffset:(CGPoint)pixelOffset {
     
     float px, py;
-    px = (point.x - self.frame.origin.x) / self.frame.size.width;
-    py = (point.y - self.frame.origin.y) / self.frame.size.height;
+    px = (pixel.x - self.frame.origin.x + pixelOffset.x) / self.frame.size.width;
+    py = (pixel.y - self.frame.origin.y + pixelOffset.y) / self.frame.size.height;
     py = 1 - py;
     
     CGPoint plotScale;
@@ -1116,6 +1150,16 @@
         array[i] = array[i-1] + step;
     }
     array[size-1] = maxVal;
+}
+
+- (void)logspace:(float)minVal max:(float)maxVal numElements:(int)size array:(float *)array {
+    
+    float min = log10f(minVal);
+    float max = log10f(maxVal);
+    [self linspace:min max:max numElements:size array:array];
+    for (int i = 0;i<size;i++) {
+        array[i] = powf(10,array[i]);
+    }
 }
 
 /* Compute the single-sided magnitude spectrum using Accelerate's vDSP methods */
@@ -1160,9 +1204,6 @@
 }
 
 @end
-
-
-
 
 
 

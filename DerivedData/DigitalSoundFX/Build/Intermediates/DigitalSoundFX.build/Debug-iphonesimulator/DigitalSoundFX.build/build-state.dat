@@ -2,13 +2,26 @@ TDigitalSoundFX
 v6
 r1
 cCheck dependencies
-cProcessPCH /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-atxxrybcolsmdkgmklrfgocauord/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/i386/AudioController.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/i386/METScopeView.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/i386/ViewController.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/ViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/i386/AppDelegate.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AppDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/i386/main.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLd /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX normal i386
+cProcessPCH /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cProcessPCH++ /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-fqzoovrhogfhxsfsutwvhddafkxb/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/METScopeView.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighShelvingFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighShelvingFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/EnvelopeView.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/FunctionDrawView.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighpassFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowpassFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowShelvingFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowShelvingFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AudioController.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVDSP.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.mm normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/ViewController.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/ViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVNotchFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVNotchFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AppDelegate.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassQPeakGainFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassQPeakGainFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVPeakingEQFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVPeakingEQFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVAllpassFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVAllpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/main.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX normal x86_64
 cCopyStringsFile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/en.lproj/InfoPlist.strings DigitalSoundFX/en.lproj/InfoPlist.strings
 cCompileStoryboard /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/Base.lproj/Main.storyboard
 cCompileAssetCatalog /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/Images.xcassets
@@ -30,6 +43,41 @@ N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/D
 c00000000531EA137000000000000019E
 t1394516279
 s414
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate
+c00000000531EA13700000000000085D0
+t1394516279
+s34256
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/vImage
+c00000000534818ED00000000005CD080
+t1397233901
+s6082688
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libBLAS.dylib
+c00000000531EA1370000000000304DA0
+t1394516279
+s3165600
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libLAPACK.dylib
+c00000000531EA1370000000000837DB0
+t1394516279
+s8617392
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvDSP.dylib
+c00000000531EA13700000000001BE720
+t1394516279
+s1828640
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvMisc.dylib
+c00000000531EA13700000000001335C0
+t1394516279
+s1258944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/vecLib
+c00000000531EA1370000000000008630
+t1394516279
+s34352
 
 N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
 c00000000531EA1380000000000904120
@@ -116,14 +164,24 @@ c00000000531EA151000000000008D370
 t1394516305
 s578416
 
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libc++.dylib
+c00000000531EA15100000000001730B0
+t1394516305
+s1519792
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libc++abi.dylib
+c00000000531EA15100000000000681A0
+t1394516305
+s426400
+
 N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libobjc.dylib
 c00000000531EA1510000000000392E20
 t1394516305
 s3747360
 
 N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
-c00000000531EF5C200000000000141F0
-t1394537922
+c000000005386529000000000000141F0
+t1401311888
 s82416
 
 N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
@@ -266,6 +324,79 @@ N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/I
 t1399860532
 s3568
 
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AppDelegate.o
+t1403626195
+s68788
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AudioController.o
+t1403626195
+s64256
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/DigitalSoundFX.LinkFileList
+c00000000539724020000000000000CFA
+t1402414082
+s3322
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/EnvelopeView.o
+t1402414085
+s71540
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/FunctionDrawView.o
+t1402414085
+s49136
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/METScopeView.o
+t1403626196
+s174348
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVAllpassFilter.o
+t1402414086
+s10528
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassFilter.o
+t1402414085
+s10580
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassQPeakGainFilter.o
+t1402414086
+s10892
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVDSP.o
+t1402414087
+s23112
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighShelvingFilter.o
+t1402414086
+s12632
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighpassFilter.o
+t1402414085
+s10644
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowShelvingFilter.o
+t1402414085
+s12600
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowpassFilter.o
+t1402414085
+s10560
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVNotchFilter.o
+t1402414085
+s10440
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVPeakingEQFilter.o
+t1402414086
+s12240
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/ViewController.o
+t1403626195
+s91260
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/main.o
+t1403626194
+s3948
+
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/assetcatalog_dependencies.txt
 t1399860544
 s344
@@ -278,28 +409,36 @@ N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/I
 t1399860532
 s116552
 
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-fqzoovrhogfhxsfsutwvhddafkxb/DigitalSoundFX-Prefix.pch.pch
+t1402414083
+s6336340
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch.pch
+t1402414084
+s117352
+
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app
-t1399860629
+t1403626199
 s272
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app.dSYM
-t1399860545
+t1402414102
 s102
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/Base.lproj/Main.storyboardc
-t1399860544
+t1403626222
 s170
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX
-t1399860629
-s76820
+t1403626199
+s224020
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/Info.plist
-t1399860544
+t1402414102
 s890
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/PkgInfo
-t1399860544
+t1402414102
 s8
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/en.lproj/InfoPlist.strings
@@ -307,29 +446,29 @@ t1399860535
 s42
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AppDelegate.h
-c000000005370109B0000000000000120
-t1399853211
-s288
+c0000000053743C91000000000000013B
+t1400126609
+s315
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AppDelegate.m
-c000000005370109B00000000000007E2
-t1399853211
+c0000000053743DF100000000000007E2
+t1400126961
 s2018
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.h
-c00000000537025F90000000000000296
-t1399858681
-s662
+c00000000539A070600000000000009D5
+t1402603270
+s2517
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.m
-c0000000053702B94000000000000249E
-t1399860116
-s9374
+c00000000539A2F8C00000000000050FE
+t1402613644
+s20734
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/Base.lproj/Main.storyboard
-c0000000053702C580000000000000FF0
-t1399860312
-s4080
+c00000000539A30260000000000002962
+t1402613798
+s10594
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Info.plist
 c000000005370109B000000000000050B
@@ -341,30 +480,50 @@ c000000005370109B0000000000000158
 t1399853211
 s344
 
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.h
+c000000005389223E0000000000000441
+t1401496126
+s1089
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.m
+c00000000538CFFB60000000000001F2D
+t1401749430
+s7981
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.h
+c00000000538CF87E000000000000015B
+t1401747582
+s347
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.m
+c00000000538CFC8B000000000000074F
+t1401748619
+s1871
+
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/Images.xcassets
 c000000005370109B0000000000000088
 t1399853211
 s136
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.h
-c0000000053702B600000000000000BBF
-t1399860064
-s3007
+c00000000539A1C380000000000001D62
+t1402608696
+s7522
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m
-c0000000053702A46000000000000655F
-t1399859782
-s25951
+c00000000539A20100000000000009F82
+t1402609680
+s40834
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/ViewController.h
-c0000000053702D9000000000000001FE
-t1399860624
-s510
+c00000000539A2D4B0000000000000691
+t1402613067
+s1681
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/ViewController.m
-c0000000053702D8E00000000000002F3
-t1399860622
-s755
+c00000000539A32930000000000003D61
+t1402614419
+s15713
 
 N/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/en.lproj/InfoPlist.strings
 c000000005370109B000000000000002D
@@ -376,9 +535,109 @@ c000000005370109B000000000000015C
 t1399853211
 s348
 
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVAllpassFilter.h
+c000000005349411A0000000000000183
+t1397309722
+s387
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVAllpassFilter.m
+c000000005349411A000000000000039D
+t1397309722
+s925
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.h
+c000000005349411A00000000000001CA
+t1397309722
+s458
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.m
+c000000005349411A000000000000039E
+t1397309722
+s926
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassQPeakGainFilter.h
+c000000005349411A00000000000001DA
+t1397309722
+s474
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassQPeakGainFilter.m
+c000000005349411A00000000000003B9
+t1397309722
+s953
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighShelvingFilter.h
+c000000005349411A00000000000001C2
+t1397309722
+s450
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighShelvingFilter.m
+c000000005349411A0000000000000512
+t1397309722
+s1298
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.h
+c000000005349411A0000000000000185
+t1397309722
+s389
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.m
+c000000005349411A00000000000003A2
+t1397309722
+s930
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowShelvingFilter.h
+c000000005349411A00000000000001C0
+t1397309722
+s448
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowShelvingFilter.m
+c000000005349411A000000000000051A
+t1397309722
+s1306
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.h
+c000000005349411A0000000000000183
+t1397309722
+s387
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.m
+c000000005349411A0000000000000396
+t1397309722
+s918
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVNotchFilter.h
+c000000005349411A000000000000017F
+t1397309722
+s383
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVNotchFilter.m
+c000000005349411A000000000000039A
+t1397309722
+s922
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVPeakingEQFilter.h
+c000000005349411A00000000000001BC
+t1397309722
+s444
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVPeakingEQFilter.m
+c000000005349411A000000000000043A
+t1397309722
+s1082
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+c000000005349411A0000000000000547
+t1397309722
+s1351
+
+N/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.mm
+c000000005349411A00000000000013E1
+t1397309722
+s5089
+
 N/usr/lib/libSystem.B.dylib
-c00000000526FC67B000000000000E6D0
-t1383057019
+c0000000053865280000000000000E6D0
+t1401311872
 s59088
 
 N/usr/lib/system/libcache.dylib
@@ -405,6 +664,11 @@ N/usr/lib/system/libcorecrypto.dylib
 c00000000526FC68A00000000000BD920
 t1383057034
 s776480
+
+N/usr/lib/system/libdyld.dylib
+c000000005386529000000000000141F0
+t1401311888
+s82416
 
 N/usr/lib/system/libkeymgr.dylib
 c00000000526FC68B000000000000A120
@@ -447,8 +711,8 @@ t1392679377
 s1477888
 
 N/usr/lib/system/libsystem_configuration.dylib
-c00000000531EF5C20000000000010630
-t1394537922
+c000000005386528D0000000000010630
+t1401311885
 s67120
 
 N/usr/lib/system/libsystem_dnssd.dylib
@@ -462,9 +726,9 @@ t1383057019
 s482048
 
 N/usr/lib/system/libsystem_kernel.dylib
-c000000005356C9FF000000000007CC70
-t1398196735
-s511088
+c0000000053865280000000000007CD60
+t1401311872
+s511328
 
 N/usr/lib/system/libsystem_m.dylib
 c00000000526FC67B00000000000766C0
@@ -492,9 +756,14 @@ t1383057035
 s124272
 
 N/usr/lib/system/libsystem_sandbox.dylib
-c00000000531EF5C2000000000000CC70
-t1394537922
+c0000000053865287000000000000CC70
+t1401311879
 s52336
+
+N/usr/lib/system/libsystem_stats.dylib
+c000000005386528A0000000000009A80
+t1401311882
+s39552
 
 N/usr/lib/system/libunc.dylib
 c00000000526FC685000000000000C3F0
@@ -512,6 +781,12 @@ r0
 CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.m
 r0
 
+CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.m
+r0
+
+CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.m
+r0
+
 CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m
 r0
 
@@ -521,9 +796,39 @@ r0
 CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/main.m
 r0
 
+CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVAllpassFilter.m
+r0
+
+CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.m
+r0
+
+CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassQPeakGainFilter.m
+r0
+
+CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighShelvingFilter.m
+r0
+
+CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.m
+r0
+
+CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowShelvingFilter.m
+r0
+
+CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.m
+r0
+
+CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVNotchFilter.m
+r0
+
+CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVPeakingEQFilter.m
+r0
+
+CBuild AST from /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.mm
+r0
+
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies005451106520b941^8b1664106520b941^---0#1#1#--18"Check dependencies36"762C8CB2-E6D1-45CC-97A9-38544586B115-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies5c72e84dda59b941^274d0f4eda59b941^---0#1#1#--18"Check dependencies36"1982271D-F42C-40B6-BEE5-2C58368A4E79-
 
 CCompileAssetCatalog /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/Images.xcassets
 s421553335.294177
@@ -626,15 +931,331 @@ d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AppDelegate.h
 lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/main.m236"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/i386/main.o DigitalSoundFX/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler1a6f43b46420b941^aa4396b46420b941^---0#0#1#-19%DVTDocumentLocation2@73"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/main.m0000000000000000^4248"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/i386/main.o DigitalSoundFX/main.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/i386 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-atxxrybcolsmdkgmklrfgocauord/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/i386/main.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/i386/main.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/main.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/i386/main.o36"250864B2-7239-4E31-A7A0-176D1CDA3892-
 b3DC97EE8-F097-4114-9861-0853388FCED5
 
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AppDelegate.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s425318990.170640
+e425318995.997256
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AppDelegate.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AppDelegate.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AppDelegate.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AppDelegate.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/ViewController.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection81"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AppDelegate.m254"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AppDelegate.o DigitalSoundFX/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler05c12b4eda59b941^e44cff53da59b941^---0#0#1#-19%DVTDocumentLocation2@80"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AppDelegate.m0000000000000000^4304"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AppDelegate.o DigitalSoundFX/AppDelegate.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AppDelegate.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AppDelegate.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AppDelegate.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AppDelegate.o36"DE8D42AE-10B5-4E3A-A61F-C60E96CF80B8-
+bAFAA84E9-38A8-401B-8926-D3FA95C1AD54
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AudioController.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s425318990.169418
+e425318995.411062
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AudioController.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.m262"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AudioController.o DigitalSoundFX/AudioController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler19732b4eda59b941^fb3d6953da59b941^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.m0000000000000000^4328"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AudioController.o DigitalSoundFX/AudioController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AudioController.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AudioController.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AudioController.o36"ED0FDE51-CA47-4476-AEB5-0BE09846C763-
+bAFAA84E9-38A8-401B-8926-D3FA95C1AD54
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/EnvelopeView.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424106884.874407
+e424106885.849961
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/EnvelopeView.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.m256"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/EnvelopeView.o DigitalSoundFX/EnvelopeView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerc6fddf845b47b941^4e97d9855b47b941^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.m0000000000000000^4310"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/EnvelopeView.o DigitalSoundFX/EnvelopeView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/EnvelopeView.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/EnvelopeView.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/EnvelopeView.o36"A7B056E1-F67E-46FA-BB71-57A9E9F04FAF-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/FunctionDrawView.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424106884.874710
+e424106885.848121
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/FunctionDrawView.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.m264"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/FunctionDrawView.o DigitalSoundFX/FunctionDrawView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler5a0ee0845b47b941^6c24d9855b47b941^---0#0#1#-19%DVTDocumentLocation2@85"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.m0000000000000000^4334"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/FunctionDrawView.o DigitalSoundFX/FunctionDrawView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/FunctionDrawView.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/FunctionDrawView.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/FunctionDrawView.o36"89C258E6-381E-4F9E-A73E-7CE320A79E21-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/METScopeView.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s425318990.167175
+e425318996.064094
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/METScopeView.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.h
+o/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m:938:36: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]
+o    return (plotDataSubviews.count - 1);
+o    ~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~^~~
+o1 warning generated.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m256"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/METScopeView.o DigitalSoundFX/METScopeView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler69fc2a4eda59b941^f06b1054da59b941^-284"/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m:938:36: warning: implicit conversion loses integer precision: 'unsigned long' to 'int' [-Wshorten-64-to-32]    return (plotDataSubviews.count - 1);    ~~~~~~  ~~~~~~~~~~~~~~~~~~~~~~~^~~1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@69"Implicit conversion loses integer precision: 'unsigned long' to 'int'-425318996#18446744073709551615#0#-1#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@81"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m0000000000000000^937#35#937#35#29732#0#22"Value Conversion Issue2(3@81"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m0000000000000000^937#12#937#38#29709#25#3@81"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m0000000000000000^937#4#937#10#29701#0#-0#0#1#-19%DVTDocumentLocation4@81"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m0000000000000000^4310"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/METScopeView.o DigitalSoundFX/METScopeView.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/METScopeView.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/METScopeView.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/METScopeView.o36"08EAB1BD-C7AE-44CB-8B2A-6603B9BFFC5B-
+bAFAA84E9-38A8-401B-8926-D3FA95C1AD54
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVAllpassFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVAllpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424106886.221726
+e424106886.316842
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVAllpassFilter.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVAllpassFilter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVAllpassFilter.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVAllpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVAllpassFilter.m261"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVAllpassFilter.o NVDSP/Filters/NVAllpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler32e438865b47b941^151d51865b47b941^---0#0#1#-19%DVTDocumentLocation2@83"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVAllpassFilter.m0000000000000000^4326"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVAllpassFilter.o NVDSP/Filters/NVAllpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVAllpassFilter.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVAllpassFilter.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVAllpassFilter.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVAllpassFilter.o36"B1BC5697-55BB-4910-9DAE-FE834A5574F1-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424106885.852947
+e424106886.203443
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassFilter.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.m263"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassFilter.o NVDSP/Filters/NVBandpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler357dda855b47b941^511434865b47b941^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.m0000000000000000^4332"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassFilter.o NVDSP/Filters/NVBandpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassFilter.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassFilter.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassFilter.o36"B3F88009-FA8B-49DE-BEB1-EDA656FCD740-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassQPeakGainFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassQPeakGainFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424106885.853524
+e424106886.224103
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassQPeakGainFilter.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassQPeakGainFilter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassQPeakGainFilter.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassQPeakGainFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassQPeakGainFilter.m281"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassQPeakGainFilter.o NVDSP/Filters/NVBandpassQPeakGainFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerb22ddb855b47b941^2ba339865b47b941^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassQPeakGainFilter.m0000000000000000^4386"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassQPeakGainFilter.o NVDSP/Filters/NVBandpassQPeakGainFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassQPeakGainFilter.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassQPeakGainFilter.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassQPeakGainFilter.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassQPeakGainFilter.o36"326D9333-4823-47F9-8810-95EA9F266017-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVDSP.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.mm normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s424106885.848393
+e424106887.090851
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVDSP.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.mm
+xnormal
+xx86_64
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.mm
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection67"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.mm236"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVDSP.o NVDSP/NVDSP.mm normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compilera38fd9855b47b941^cc4217875b47b941^---0#0#1#-19%DVTDocumentLocation2@66"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.mm0000000000000000^4400"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVDSP.o NVDSP/NVDSP.mm normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility-inlines-hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-fqzoovrhogfhxsfsutwvhddafkxb/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVDSP.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVDSP.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.mm -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVDSP.o36"5C9582B0-DD51-4020-812A-06B2E924EB04-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighShelvingFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighShelvingFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424106884.874188
+e424106886.227768
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighShelvingFilter.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighShelvingFilter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighShelvingFilter.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighShelvingFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighShelvingFilter.m271"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighShelvingFilter.o NVDSP/Filters/NVHighShelvingFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler3be3df845b47b941^94503a865b47b941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighShelvingFilter.m0000000000000000^4356"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighShelvingFilter.o NVDSP/Filters/NVHighShelvingFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighShelvingFilter.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighShelvingFilter.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighShelvingFilter.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighShelvingFilter.o36"BF183423-CC58-4202-970B-D72F3CFF0C08-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighpassFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424106884.875064
+e424106885.851913
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighpassFilter.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.m263"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighpassFilter.o NVDSP/Filters/NVHighpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler113ae0845b47b941^a819da855b47b941^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.m0000000000000000^4332"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighpassFilter.o NVDSP/Filters/NVHighpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighpassFilter.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighpassFilter.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighpassFilter.o36"073E875C-87E0-4199-8583-56887730690A-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowShelvingFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowShelvingFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424106884.876236
+e424106885.850183
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowShelvingFilter.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowShelvingFilter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowShelvingFilter.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowShelvingFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowShelvingFilter.m269"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowShelvingFilter.o NVDSP/Filters/NVLowShelvingFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerd751e1845b47b941^3885d9855b47b941^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowShelvingFilter.m0000000000000000^4350"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowShelvingFilter.o NVDSP/Filters/NVLowShelvingFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowShelvingFilter.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowShelvingFilter.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowShelvingFilter.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowShelvingFilter.o36"D61B83F8-C9D9-43A2-9B24-B1E8E66883B8-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowpassFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424106884.875558
+e424106885.845886
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowpassFilter.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.m261"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowpassFilter.o NVDSP/Filters/NVLowpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler7651e0845b47b941^508cd8855b47b941^---0#0#1#-19%DVTDocumentLocation2@83"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.m0000000000000000^4326"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowpassFilter.o NVDSP/Filters/NVLowpassFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowpassFilter.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowpassFilter.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowpassFilter.o36"6F8C360C-7BC9-43FD-871A-7AE539C07DAD-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVNotchFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVNotchFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424106885.851668
+e424106886.203826
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVNotchFilter.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVNotchFilter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVNotchFilter.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVNotchFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVNotchFilter.m257"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVNotchFilter.o NVDSP/Filters/NVNotchFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerba66da855b47b941^2c2c34865b47b941^---0#0#1#-19%DVTDocumentLocation2@81"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVNotchFilter.m0000000000000000^4314"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVNotchFilter.o NVDSP/Filters/NVNotchFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVNotchFilter.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVNotchFilter.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVNotchFilter.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVNotchFilter.o36"9911E702-A79C-4042-AD91-DA3684B90B9C-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVPeakingEQFilter.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVPeakingEQFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424106886.220686
+e424106886.317351
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVPeakingEQFilter.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVPeakingEQFilter.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVPeakingEQFilter.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVPeakingEQFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection86"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVPeakingEQFilter.m265"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVPeakingEQFilter.o NVDSP/Filters/NVPeakingEQFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilera1a038865b47b941^c43e51865b47b941^---0#0#1#-19%DVTDocumentLocation2@85"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVPeakingEQFilter.m0000000000000000^4338"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVPeakingEQFilter.o NVDSP/Filters/NVPeakingEQFilter.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVPeakingEQFilter.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVPeakingEQFilter.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVPeakingEQFilter.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVPeakingEQFilter.o36"44172664-7403-435C-930D-E86F5F2B4024-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/ViewController.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/ViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s425318990.169975
+e425318995.965552
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/ViewController.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/ViewController.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/ViewController.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/ViewController.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/ViewController.m260"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/ViewController.o DigitalSoundFX/ViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler9e962b4eda59b941^3832f753da59b941^---0#0#1#-19%DVTDocumentLocation2@83"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/ViewController.m0000000000000000^4322"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/ViewController.o DigitalSoundFX/ViewController.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/ViewController.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/ViewController.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/ViewController.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/ViewController.o36"AF385BD3-E3C2-4EDB-B9DB-95E65275E69B-
+bAFAA84E9-38A8-401B-8926-D3FA95C1AD54
+
+CCompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/main.o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s425318990.172019
+e425318995.037563
+r1
+xCompileC
+xDerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/main.o
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/main.m
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/main.m
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AppDelegate.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/ViewController.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/AudioController.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/NVDSP.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVBandpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVHighpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/NVDSP/Filters/NVLowpassFilter.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/METScopeView.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/EnvelopeView.h
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/FunctionDrawView.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection74"Compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/main.m240"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/main.o DigitalSoundFX/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compilerf81c2c4eda59b941^459d0953da59b941^---0#0#1#-19%DVTDocumentLocation2@73"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/main.m0000000000000000^4262"CompileC DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/main.o DigitalSoundFX/main.m normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -include /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/main.dia -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/main.m -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/main.o36"5DBB8DF6-5AD1-4F14-A9A8-42485C0EA2DA-
+bAFAA84E9-38A8-401B-8926-D3FA95C1AD54
+
 CCompileStoryboard /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/Base.lproj/Main.storyboard
-s421553335.293832
-e421553344.983580
+s425318999.026457
+e425319022.070911
 r1
 xCompileStoryboard
 x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/Base.lproj/Main.storyboard
-o2014-05-11 22:09:04.747 Interface Builder Cocoa Touch Tool[50281:303] CFPreferences: user home directory at file:///Users/Jeff/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"CompileStoryboard DigitalSoundFX/Base.lproj/Main.storyboard59"CompileStoryboard DigitalSoundFX/Base.lproj/Main.storyboard4a454bb76420b941^5cccfbc06420b941^-229"2014-05-11 22:09:04.747 Interface Builder Cocoa Touch Tool[50281:303] CFPreferences: user home directory at file:///Users/Jeff/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#1#-19%DVTDocumentLocation2@93"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/Base.lproj/Main.storyboard0000000000000000^905"CompileStoryboard DigitalSoundFX/Base.lproj/Main.storyboard    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export IBSC_MINIMUM_COMPATIBILITY_VERSION=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.1 --output-format human-readable-text --compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/Base.lproj/Main.storyboardc /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/Base.lproj/Main.storyboard36"ED4FBC7C-4C9D-40CB-86F6-0DB30045930A-
-b3DC97EE8-F097-4114-9861-0853388FCED5
+o2014-06-24 12:10:13.394 Interface Builder Cocoa Touch Tool[856:303] CFPreferences: user home directory at file:///Users/Jeff/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+o2014-06-24 12:10:21.591 Interface Builder Cocoa Touch Tool[859:303] CFPreferences: user home directory at file:///Users/Jeff/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection59"CompileStoryboard DigitalSoundFX/Base.lproj/Main.storyboard59"CompileStoryboard DigitalSoundFX/Base.lproj/Main.storyboardfad30657da59b941^49da156eda59b941^-454"2014-06-24 12:10:13.394 Interface Builder Cocoa Touch Tool[856:303] CFPreferences: user home directory at file:///Users/Jeff/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.2014-06-24 12:10:21.591 Interface Builder Cocoa Touch Tool[859:303] CFPreferences: user home directory at file:///Users/Jeff/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.-0#0#1#-19%DVTDocumentLocation2@93"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/Base.lproj/Main.storyboard0000000000000000^905"CompileStoryboard DigitalSoundFX/Base.lproj/Main.storyboard    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export IBSC_MINIMUM_COMPATIBILITY_VERSION=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    export XCODE_DEVELOPER_USR_PATH=/Applications/Xcode.app/Contents/Developer/usr/bin/..    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/ibtool --errors --warnings --notices --minimum-deployment-target 7.1 --output-format human-readable-text --compile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/Base.lproj/Main.storyboardc /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/Base.lproj/Main.storyboard36"B9F5F439-46C4-4589-B5B9-B60A7EC3B0E4-
+bAFAA84E9-38A8-401B-8926-D3FA95C1AD54
 
 CCopyStringsFile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/en.lproj/InfoPlist.strings DigitalSoundFX/en.lproj/InfoPlist.strings
 s421553335.293691
@@ -647,14 +1268,14 @@ lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy Di
 b3DC97EE8-F097-4114-9861-0853388FCED5
 
 CGenerateDSYMFile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app.dSYM /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX
-s421553429.170408
-e421553429.758959
+s425319022.071608
+e425319022.286668
 r1
 xGenerateDSYMFile
 x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app.dSYM
 x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection141"Generate /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app.dSYM202"GenerateDSYMFile DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app.dSYM DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFXf7ac2b156520b941^884bc2156520b941^---0#0#1#-19%DVTDocumentLocation2@140"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app.dSYM/0000000000000000^829"GenerateDSYMFile DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app.dSYM DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app.dSYM36"439421E7-74CB-4FF5-8986-53BF22CEB0FC-
-b223E244D-4F2A-4E79-ADD4-A3A3A57CC4AD
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection141"Generate /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app.dSYM202"GenerateDSYMFile DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app.dSYM DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX2063126eda59b941^dc294d6eda59b941^---0#0#1#-19%DVTDocumentLocation2@140"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app.dSYM/0000000000000000^829"GenerateDSYMFile DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app.dSYM DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app.dSYM36"C9B0CB79-F611-48F3-8052-B2EF7B719910-
+bAFAA84E9-38A8-401B-8926-D3FA95C1AD54
 
 CLd /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX normal i386
 s421553427.446400
@@ -740,15 +1361,121 @@ d/usr/lib/system/libunwind.dylib
 lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection147"Link /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX112"Ld DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX normal i3867c6172136520b941^92921e156520b941^---0#0#1#--1681"Ld DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX normal i386    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -filelist /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/i386/DigitalSoundFX.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -mios-simulator-version-min=7.1 -framework AudioToolbox -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/i386/DigitalSoundFX_dependency_info.dat -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX36"FB97F5FF-66B2-47D6-9448-217D523C99AB-
 b223E244D-4F2A-4E79-ADD4-A3A3A57CC4AD
 
+CLd /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX normal x86_64
+s425318996.366103
+e425318999.025044
+r1
+xLd
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX
+xnormal
+xx86_64
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/DigitalSoundFX.LinkFileList
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/crt1.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/METScopeView.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighShelvingFilter.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/EnvelopeView.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/FunctionDrawView.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVHighpassFilter.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowpassFilter.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVLowShelvingFilter.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AudioController.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVDSP.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/ViewController.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVNotchFilter.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/AppDelegate.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassFilter.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVBandpassQPeakGainFilter.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVPeakingEQFilter.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/NVAllpassFilter.o
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/main.o
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libobjc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libc++.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libSystem.dylib
+d/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/5.1/lib/darwin/libclang_rt.ios.a
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreMIDI.framework/CoreMIDI
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Accelerate
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreVideo.framework/CoreVideo
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreImage.framework/CoreImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Security.framework/Security
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/CoreText.framework/CoreText
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_override.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcache_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcommonCrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcorecrypto_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcompiler_rt_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libcopyfile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdispatch.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libdyld_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libmacho_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libnotify_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libremovefile_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_blocks.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_c.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_dnssd.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_info.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_m.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_network.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libunwind_sim.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libxpc.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_configuration.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/libsystem_sim_asl.dylib
+d/usr/lib/libSystem.B.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/vImage
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/vecLib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvDSP.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/libc++abi.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/usr/lib/system/host/libdyld.dylib
+d/usr/lib/system/libcache.dylib
+d/usr/lib/system/libcommonCrypto.dylib
+d/usr/lib/system/libcompiler_rt.dylib
+d/usr/lib/system/libcopyfile.dylib
+d/usr/lib/system/libcorecrypto.dylib
+d/usr/lib/system/libkeymgr.dylib
+d/usr/lib/system/liblaunch.dylib
+d/usr/lib/system/libmacho.dylib
+d/usr/lib/system/libquarantine.dylib
+d/usr/lib/system/libremovefile.dylib
+d/usr/lib/system/libsystem_asl.dylib
+d/usr/lib/system/libsystem_blocks.dylib
+d/usr/lib/system/libsystem_c.dylib
+d/usr/lib/system/libsystem_configuration.dylib
+d/usr/lib/system/libsystem_dnssd.dylib
+d/usr/lib/system/libsystem_info.dylib
+d/usr/lib/system/libsystem_kernel.dylib
+d/usr/lib/system/libsystem_m.dylib
+d/usr/lib/system/libsystem_malloc.dylib
+d/usr/lib/system/libsystem_notify.dylib
+d/usr/lib/system/libsystem_platform.dylib
+d/usr/lib/system/libsystem_pthread.dylib
+d/usr/lib/system/libsystem_sandbox.dylib
+d/usr/lib/system/libsystem_stats.dylib
+d/usr/lib/system/libunc.dylib
+d/usr/lib/system/libunwind.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libLAPACK.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libBLAS.dylib
+d/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libvMisc.dylib
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection147"Link /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX114"Ld DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX normal x86_6429ce5d54da59b941^556a0657da59b941^---0#0#1#--1706"Ld DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX normal x86_64    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export IPHONEOS_DEPLOYMENT_TARGET=7.1    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator -filelist /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/DigitalSoundFX.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -fobjc-arc -fobjc-link-runtime -Xlinker -no_implicit_dylibs -stdlib=libc++ -mios-simulator-version-min=7.1 -framework AudioToolbox -framework CoreGraphics -framework UIKit -framework Foundation -Xlinker -dependency_info -Xlinker /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/Objects-normal/x86_64/DigitalSoundFX_dependency_info.dat -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/DigitalSoundFX36"8F7A3116-BFB4-4865-A0D8-FECB615131AD-
+bAFAA84E9-38A8-401B-8926-D3FA95C1AD54
+
 CProcessInfoPlistFile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/Info.plist /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Info.plist
-s421553344.984185
-e421553344.985941
+s424106902.584730
+e424106902.631428
 r1
 xProcessInfoPlistFile
 x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/Info.plist
 x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Info.plist
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Process /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Info.plist155"ProcessInfoPlistFile DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/Info.plist DigitalSoundFX/DigitalSoundFX-Info.plisteb00fcc06420b941^f167fcc06420b941^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Info.plist0000000000000000^1083"ProcessInfoPlistFile DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/Info.plist DigitalSoundFX/DigitalSoundFX-Info.plist    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Info.plist -genpkginfo /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/assetcatalog_generated_info.plist -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/Info.plist36"9868493C-C319-42D1-9F3E-7F8E37B4098A-
-b3DC97EE8-F097-4114-9861-0853388FCED5
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Process /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Info.plist155"ProcessInfoPlistFile DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/Info.plist DigitalSoundFX/DigitalSoundFX-Info.plist72c595965b47b941^1ea6a1965b47b941^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Info.plist0000000000000000^1083"ProcessInfoPlistFile DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/Info.plist DigitalSoundFX/DigitalSoundFX-Info.plist    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Info.plist -genpkginfo /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/assetcatalog_generated_info.plist -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app/Info.plist36"CF0BB3EE-423B-4F95-9B9F-BFBA6E7A0E56-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
 
 CProcessPCH /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-atxxrybcolsmdkgmklrfgocauord/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
 s421553319.989698
@@ -765,9 +1492,51 @@ d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Pref
 lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Precompile DigitalSoundFX/DigitalSoundFX-Prefix.pch266"ProcessPCH DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-atxxrybcolsmdkgmklrfgocauord/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler5586fda76420b941^28d542b46420b941^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Prefix.pch0000000000000000^4130"ProcessPCH DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-atxxrybcolsmdkgmklrfgocauord/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/i386 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-atxxrybcolsmdkgmklrfgocauord/DigitalSoundFX-Prefix.pch.dia -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-atxxrybcolsmdkgmklrfgocauord/DigitalSoundFX-Prefix.pch.d -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Prefix.pch -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-atxxrybcolsmdkgmklrfgocauord/DigitalSoundFX-Prefix.pch.pch36"ECCB4B67-3429-4777-A401-FE013EA729EF-
 b3DC97EE8-F097-4114-9861-0853388FCED5
 
+CProcessPCH /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler
+s424106882.443049
+e424106884.873230
+r1
+xProcessPCH
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch.pch
+xDigitalSoundFX/DigitalSoundFX-Prefix.pch
+xnormal
+xx86_64
+xobjective-c
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Precompile DigitalSoundFX/DigitalSoundFX-Prefix.pch268"ProcessPCH DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler596972825b47b941^a88cdf845b47b941^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Prefix.pch0000000000000000^4136"ProcessPCH DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu99 -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch.dia -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch.d -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Prefix.pch -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-gsxfonwsucbkhpbafcczrbetxwws/DigitalSoundFX-Prefix.pch.pch36"1220BE43-E5AB-4297-B4C4-DF2C7901E660-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
 CProcessPCH /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Index/PrecompiledHeaders/DigitalSoundFX-Prefix-ckepqkopapexslfxxlentxzwgbhm_ast/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
 r0
 
-CTouch /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app
+CProcessPCH /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Index/PrecompiledHeaders/DigitalSoundFX-Prefix-gvvvbjzreuovuvaeckqrvvdvwhoh_ast/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal x86_64 objective-c com.apple.compilers.llvm.clang.1_0.astbuilder
 r0
+
+CProcessPCH++ /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-fqzoovrhogfhxsfsutwvhddafkxb/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler
+s424106882.443378
+e424106884.304188
+r1
+xProcessPCH++
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-fqzoovrhogfhxsfsutwvhddafkxb/DigitalSoundFX-Prefix.pch.pch
+xDigitalSoundFX/DigitalSoundFX-Prefix.pch
+xnormal
+xx86_64
+xobjective-c++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Prefix.pch
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection51"Precompile DigitalSoundFX/DigitalSoundFX-Prefix.pch272"ProcessPCH++ DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-fqzoovrhogfhxsfsutwvhddafkxb/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler7b6972825b47b941^98df4d845b47b941^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Prefix.pch0000000000000000^4286"ProcessPCH++ DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-fqzoovrhogfhxsfsutwvhddafkxb/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c++-header -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -fobjc-arc -fmodules -fmodules-cache-path=/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Wno-implicit-atomic-properties -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility-inlines-hidden -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=7.1 -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-generated-files.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-own-target-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-all-target-headers.hmap -iquote /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DigitalSoundFX-project-headers.hmap -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources/x86_64 -I/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/DigitalSoundFX.build/Debug-iphonesimulator/DigitalSoundFX.build/DerivedSources -F/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator --serialize-diagnostics /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-fqzoovrhogfhxsfsutwvhddafkxb/DigitalSoundFX-Prefix.pch.dia -MMD -MT dependencies -MF /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-fqzoovrhogfhxsfsutwvhddafkxb/DigitalSoundFX-Prefix.pch.d -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/DigitalSoundFX/DigitalSoundFX-Prefix.pch -o /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Intermediates/PrecompiledHeaders/DigitalSoundFX-Prefix-fqzoovrhogfhxsfsutwvhddafkxb/DigitalSoundFX-Prefix.pch.pch36"2036F576-5425-4583-AC76-5A38F74872A5-
+bE597C4D0-0B39-4DF0-B9BB-C27F8E1E8B92
+
+CProcessPCH++ /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Index/PrecompiledHeaders/DigitalSoundFX-Prefix-ebvpwubhhaahuedyaqoxtyuoohxf_ast/DigitalSoundFX-Prefix.pch.pch DigitalSoundFX/DigitalSoundFX-Prefix.pch normal x86_64 objective-c++ com.apple.compilers.llvm.clang.1_0.astbuilder
+r0
+
+CTouch /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app
+s425319022.287105
+e425319022.290406
+r1
+xTouch
+x/Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection133"Touch /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app88"Touch DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app198c496eda59b941^842e4d6eda59b941^---0#0#1#--486"Touch DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app    cd /Users/Jeff/Computering/Xcode/DigitalSoundFX    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/Jeff/Computering/Xcode/DigitalSoundFX/DerivedData/DigitalSoundFX/Build/Products/Debug-iphonesimulator/DigitalSoundFX.app36"15AF9014-E58E-4CB3-B987-3874D7C54ABB-
+bAFAA84E9-38A8-401B-8926-D3FA95C1AD54
 
