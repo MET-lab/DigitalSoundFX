@@ -37,6 +37,9 @@
 /* Write data to the circular buffer */
 - (void)writeDataWithLength:(int)length inData:(Float32 *)data;
 
+/* Read data starting from the write pointer without changing read/write pointers */
+- (void)readDataFromWritePointerWithLength:(int)length outData:(Float32 *)data;
+
 /* Read data starting from the delay tap index*/
 - (void)readFromDelayTap:(int)tapIdx withLength:(int)length outData:(Float32 *)data;
 
