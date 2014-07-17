@@ -190,9 +190,11 @@
     pinchRegionFrame.size.height = tdScopeView.frame.size.height;
     pinchRegionFrame.origin.x = tdScopeView.frame.size.width - pinchRegionFrame.size.width;
     pinchRegionFrame.origin.y = 0;
-    distPinchRegionView = [[UIView alloc] initWithFrame:pinchRegionFrame];
-    [distPinchRegionView setBackgroundColor:[UIColor greenColor]];
-    [distPinchRegionView setAlpha:0.05];
+    distPinchRegionView = [[PinchRegionView alloc] initWithFrame:pinchRegionFrame];
+    [distPinchRegionView setBackgroundColor:[[UIColor greenColor] colorWithAlphaComponent:0.05]];
+    [distPinchRegionView setLinesVisible:false];
+    CGPoint pix = [tdScopeView plotScaleToPixel:CGPointMake(0.0, audioController->clippingAmplitude)];
+    [distPinchRegionView setPixelHeightFromCenter:pix.y-distPinchRegionView.frame.size.height/2];
     [tdScopeView addSubview:distPinchRegionView];
     
     /* Add a tap gesture recognizer to enable clipping */
@@ -243,7 +245,7 @@
     hpfTapRegionView = [[FilterTapRegionView alloc] initWithFrame:hpfTapRegionFrame];
     [hpfTapRegionView setBackgroundColor:[UIColor clearColor]];
     [hpfTapRegionView setFillColor:[UIColor blackColor]];
-    [hpfTapRegionView setFillAlpha:0.05];
+    [hpfTapRegionView setAlpha:0.05];
     [fdScopeView addSubview:hpfTapRegionView];
     
     /* Add a tap gesture recognizer to enable/disable the HPF */
@@ -260,7 +262,7 @@
     lpfTapRegionView = [[FilterTapRegionView alloc] initWithFrame:lpfTapRegionFrame];
     [lpfTapRegionView setBackgroundColor:[UIColor clearColor]];
     [lpfTapRegionView setFillColor:[UIColor blackColor]];
-    [lpfTapRegionView setFillAlpha:0.05];
+    [lpfTapRegionView setAlpha:0.05];
     [fdScopeView addSubview:lpfTapRegionView];
     
     /* Add a tap gesture recognizer to enable/disable the HPF */
@@ -737,7 +739,8 @@
         [tdScopeView setVisibilityAtIndex:tdClipIdxLow visible:false];
         [tdScopeView setVisibilityAtIndex:tdClipIdxHigh visible:false];
         [distCutoffPinchRecognizer setEnabled:false];
-        [distPinchRegionView setAlpha:0.05];
+        [distPinchRegionView setBackgroundColor:[[UIColor greenColor] colorWithAlphaComponent:0.05]];
+        [distPinchRegionView setLinesVisible:false];
     }
     
     else {
@@ -746,7 +749,8 @@
         [tdScopeView setVisibilityAtIndex:tdClipIdxLow visible:true];
         [tdScopeView setVisibilityAtIndex:tdClipIdxHigh visible:true];
         [distCutoffPinchRecognizer setEnabled:true];
-        [distPinchRegionView setAlpha:0.15];
+        [distPinchRegionView setBackgroundColor:[[UIColor greenColor] colorWithAlphaComponent:0.15]];
+        [distPinchRegionView setLinesVisible:true];
     }
     
     CGRect flashFrame = distPinchRegionView.frame;
@@ -775,6 +779,11 @@
     
     /* Draw the clipping amplitude */
     [self plotClippingThreshold];
+    
+    /* Convert the clipping amplitude to pixels for the pinch region view */
+    CGPoint pix = [tdScopeView plotScaleToPixel:CGPointMake(0.0, audioController->clippingAmplitude)];
+    pix.y -= distPinchRegionView.frame.size.height/2.0;
+    [distPinchRegionView setPixelHeightFromCenter:pix.y];
 }
 
 - (void)handleModFreqTap:(UITapGestureRecognizer *)sender {
@@ -869,34 +878,58 @@
     
     CGPoint touchLoc = [sender locationInView:hpfTapRegionView];
     
+    float endAlpha;
+    
     if (![hpfTapRegionView pointInFillRegion:touchLoc])
         return;
     
     if ([audioController hpfEnabled]) {
         [audioController setHpfEnabled:false];
-        [hpfTapRegionView setFillAlpha:0.05];
+        endAlpha = 0.05;
     }
     else {
         [audioController setHpfEnabled:true];
-        [hpfTapRegionView setFillAlpha:0.15];
+        endAlpha = 0.15;
     }
+    
+    [hpfTapRegionView setAlpha:0.5f];
+    [UIView animateWithDuration:0.5f
+                     animations:^{
+                         [hpfTapRegionView setAlpha:endAlpha];
+                     }
+                     completion:^(BOOL finished) {
+                         [hpfTapRegionView setAlpha:endAlpha];
+                     }
+     ];
 }
 
 - (void)toggleLPF:(UITapGestureRecognizer *)sender {
     
     CGPoint touchLoc = [sender locationInView:lpfTapRegionView];
     
+    float endAlpha;
+    
     if (![lpfTapRegionView pointInFillRegion:touchLoc])
         return;
     
     if ([audioController lpfEnabled]) {
         [audioController setLpfEnabled:false];
-        [lpfTapRegionView setFillAlpha:0.05];
+        endAlpha = 0.05;
     }
     else {
         [audioController setLpfEnabled:true];
-        [lpfTapRegionView setFillAlpha:0.15];
+        endAlpha = 0.15;
     }
+    
+    [lpfTapRegionView setAlpha:0.5f];
+    [UIView animateWithDuration:0.5f
+                     animations:^{
+                         [lpfTapRegionView setAlpha:endAlpha];
+                     }
+                     completion:^(BOOL finished) {
+                         [lpfTapRegionView setAlpha:endAlpha];
+                     }
+     ];
 }
 
 - (IBAction)toggleInput:(id)sender {

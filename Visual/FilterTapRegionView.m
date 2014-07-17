@@ -19,7 +19,7 @@
     if (self) {
         
         fillColor = [UIColor blackColor];
-        fillAlpha = 0.05;
+        fillAlpha = 1.0;
         
         CGPoint p[4];
         p[0] = CGPointMake(0, 0);

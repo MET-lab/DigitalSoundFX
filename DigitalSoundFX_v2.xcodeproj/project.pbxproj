@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F22692C196B49A4009D8F18 /* FilterTapRegionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F22692B196B49A4009D8F18 /* FilterTapRegionView.m */; };
+		1FBE91A719775D340097D493 /* PinchRegionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBE91A619775D340097D493 /* PinchRegionView.m */; };
 		1FC51713195B56050025AAA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC51712195B56050025AAA7 /* Foundation.framework */; };
 		1FC51715195B56050025AAA7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC51714195B56050025AAA7 /* CoreGraphics.framework */; };
 		1FC51717195B56050025AAA7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FC51716195B56050025AAA7 /* UIKit.framework */; };
@@ -50,6 +51,8 @@
 /* Begin PBXFileReference section */
 		1F22692A196B49A4009D8F18 /* FilterTapRegionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FilterTapRegionView.h; path = Visual/FilterTapRegionView.h; sourceTree = "<group>"; };
 		1F22692B196B49A4009D8F18 /* FilterTapRegionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FilterTapRegionView.m; path = Visual/FilterTapRegionView.m; sourceTree = "<group>"; };
+		1FBE91A519775D340097D493 /* PinchRegionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PinchRegionView.h; path = Visual/PinchRegionView.h; sourceTree = "<group>"; };
+		1FBE91A619775D340097D493 /* PinchRegionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PinchRegionView.m; path = Visual/PinchRegionView.m; sourceTree = "<group>"; };
 		1FC5170F195B56050025AAA7 /* DigitalSoundFX_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalSoundFX_v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC51712195B56050025AAA7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1FC51714195B56050025AAA7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -124,6 +127,8 @@
 		1FC51706195B56050025AAA7 = {
 			isa = PBXGroup;
 			children = (
+				1FBE91A519775D340097D493 /* PinchRegionView.h */,
+				1FBE91A619775D340097D493 /* PinchRegionView.m */,
 				1F22692A196B49A4009D8F18 /* FilterTapRegionView.h */,
 				1F22692B196B49A4009D8F18 /* FilterTapRegionView.m */,
 				1FC51747195B56970025AAA7 /* Audio */,
@@ -372,6 +377,7 @@
 				1FC5171F195B56050025AAA7 /* main.m in Sources */,
 				1FC5176C195B56970025AAA7 /* NVLowpassFilter.m in Sources */,
 				1FC51769195B56970025AAA7 /* NVBandpassQPeakGainFilter.m in Sources */,
+				1FBE91A719775D340097D493 /* PinchRegionView.m in Sources */,
 				1FC5176B195B56970025AAA7 /* NVHighShelvingFilter.m in Sources */,
 				1FC5176A195B56970025AAA7 /* NVHighpassFilter.m in Sources */,
 				1FC5176D195B56970025AAA7 /* NVLowShelvingFilter.m in Sources */,

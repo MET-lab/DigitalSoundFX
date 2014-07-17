@@ -8,4 +8,5 @@ dependencies: \
   /Users/Jeff/Computering/Xcode/DigitalSoundFX_v2/NVDSP/Filters/NVLowpassFilter.h \
   /Users/Jeff/Computering/Xcode/DigitalSoundFX_v2/Utility/CircularBuffer.h \
   /Users/Jeff/Computering/Xcode/DigitalSoundFX_v2/Visual/METScopeView.h \
-  /Users/Jeff/Computering/Xcode/DigitalSoundFX_v2/Visual/FilterTapRegionView.h
+  /Users/Jeff/Computering/Xcode/DigitalSoundFX_v2/Visual/FilterTapRegionView.h \
+  /Users/Jeff/Computering/Xcode/DigitalSoundFX_v2/Visual/PinchRegionView.h

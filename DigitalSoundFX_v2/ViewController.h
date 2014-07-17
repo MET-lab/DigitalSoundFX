@@ -11,6 +11,7 @@
 #import "AudioController.h"
 #import "METScopeView.h"
 #import "FilterTapRegionView.h"
+#import "PinchRegionView.h"
 
 #define kFFTSize 1024
 #define kScopeUpdateRate 0.003
@@ -52,7 +53,7 @@
     UILabel *delayAmountValue;
     
     /* Distortion cutoff control */
-    UIView *distPinchRegionView;
+    PinchRegionView *distPinchRegionView;
     UITapGestureRecognizer *distCutoffTapRecognizer;
     UIPinchGestureRecognizer *distCutoffPinchRecognizer;
     CGFloat previousPinchScale;
