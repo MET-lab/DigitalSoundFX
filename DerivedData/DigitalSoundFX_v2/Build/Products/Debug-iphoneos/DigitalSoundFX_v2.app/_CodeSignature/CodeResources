@@ -4,9 +4,33 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AppIcon29x29@2x~ipad.png</key>
+		<data>
+		CZT+z+MW0rDG+9TtbVRMAHwT7J8=
+		</data>
+		<key>AppIcon29x29~ipad.png</key>
+		<data>
+		5urcgCvN3CB4UqU+EP6r4QYCyn4=
+		</data>
+		<key>AppIcon40x40@2x~ipad.png</key>
+		<data>
+		aX9JBvUOctbsuGat1CXN9RDD4jI=
+		</data>
+		<key>AppIcon40x40~ipad.png</key>
+		<data>
+		bg1O65E2jxNkzbtHmR1GpXnAjl8=
+		</data>
+		<key>AppIcon76x76@2x~ipad.png</key>
+		<data>
+		m1REqJK9pFyYMtoYedwZVPZyGos=
+		</data>
+		<key>AppIcon76x76~ipad.png</key>
+		<data>
+		zFIzqSw8bzdHYbcoGq3qqvB5G8E=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		mRIscqMq7sl4Uas4rpqyQbKtmDM=
+		NsyE7bOUiLzSe67vsmSyTaGWEzg=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -20,6 +44,10 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>Synthesis Icon.png</key>
+		<data>
+		4RmlKVpYJTWPkTPrzx9hu+d7sXs=
+		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
 		7LZv6ZNqKNj5FTKgV56l4A/lTPA=
@@ -27,13 +55,61 @@
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
 		zmV6UqBSo6r1NOz798vd5O4zTBA=
+		</data>
+		<key>icon_152.png</key>
+		<data>
+		m1REqJK9pFyYMtoYedwZVPZyGos=
+		</data>
+		<key>icon_29.png</key>
+		<data>
+		5urcgCvN3CB4UqU+EP6r4QYCyn4=
+		</data>
+		<key>icon_40.png</key>
+		<data>
+		bg1O65E2jxNkzbtHmR1GpXnAjl8=
+		</data>
+		<key>icon_58.png</key>
+		<data>
+		CZT+z+MW0rDG+9TtbVRMAHwT7J8=
+		</data>
+		<key>icon_76.png</key>
+		<data>
+		zFIzqSw8bzdHYbcoGq3qqvB5G8E=
+		</data>
+		<key>icon_80.png</key>
+		<data>
+		aX9JBvUOctbsuGat1CXN9RDD4jI=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AppIcon29x29@2x~ipad.png</key>
+		<data>
+		CZT+z+MW0rDG+9TtbVRMAHwT7J8=
+		</data>
+		<key>AppIcon29x29~ipad.png</key>
+		<data>
+		5urcgCvN3CB4UqU+EP6r4QYCyn4=
+		</data>
+		<key>AppIcon40x40@2x~ipad.png</key>
+		<data>
+		aX9JBvUOctbsuGat1CXN9RDD4jI=
+		</data>
+		<key>AppIcon40x40~ipad.png</key>
+		<data>
+		bg1O65E2jxNkzbtHmR1GpXnAjl8=
+		</data>
+		<key>AppIcon76x76@2x~ipad.png</key>
+		<data>
+		m1REqJK9pFyYMtoYedwZVPZyGos=
+		</data>
+		<key>AppIcon76x76~ipad.png</key>
+		<data>
+		zFIzqSw8bzdHYbcoGq3qqvB5G8E=
+		</data>
 		<key>Assets.car</key>
 		<data>
-		mRIscqMq7sl4Uas4rpqyQbKtmDM=
+		NsyE7bOUiLzSe67vsmSyTaGWEzg=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
@@ -47,6 +123,10 @@
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>Synthesis Icon.png</key>
+		<data>
+		4RmlKVpYJTWPkTPrzx9hu+d7sXs=
+		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
 		7LZv6ZNqKNj5FTKgV56l4A/lTPA=
@@ -54,6 +134,30 @@
 		<key>en.lproj/InfoPlist.strings</key>
 		<data>
 		zmV6UqBSo6r1NOz798vd5O4zTBA=
+		</data>
+		<key>icon_152.png</key>
+		<data>
+		m1REqJK9pFyYMtoYedwZVPZyGos=
+		</data>
+		<key>icon_29.png</key>
+		<data>
+		5urcgCvN3CB4UqU+EP6r4QYCyn4=
+		</data>
+		<key>icon_40.png</key>
+		<data>
+		bg1O65E2jxNkzbtHmR1GpXnAjl8=
+		</data>
+		<key>icon_58.png</key>
+		<data>
+		CZT+z+MW0rDG+9TtbVRMAHwT7J8=
+		</data>
+		<key>icon_76.png</key>
+		<data>
+		zFIzqSw8bzdHYbcoGq3qqvB5G8E=
+		</data>
+		<key>icon_80.png</key>
+		<data>
+		aX9JBvUOctbsuGat1CXN9RDD4jI=
 		</data>
 	</dict>
 	<key>rules</key>
